@@ -1073,35 +1073,7 @@ const App = {
      */
     checkout() {
         const name = document.getElementById('customer-name').value.trim();
-        const cpf = document.getElementById('customer-cpf').value.trim();
-        const cep = document.getElementById('customer-cep').value.trim();
         const address = document.getElementById('customer-address').value.trim();
-        const obs = document.getElementById('customer-obs').value.trim();
-
-        // Validação de todos os campos obrigatórios
-        if (!this.validateField('customer-name', 'Informe seu nome completo')) return;
-        if (!this.validateField('customer-cpf', 'Informe seu CPF')) return;
-        if (!this.validateField('customer-cep', 'Informe seu CEP')) return;
-        if (!this.validateField('customer-address', 'Informe seu endereço completo')) return;
-        if (!this.validateField('customer-obs', 'Informe as observações do pedido')) return;
-
-        // Validação de CPF (11 dígitos)
-        const cpfNumbers = cpf.replace(/\D/g, '');
-        if (cpfNumbers.length !== 11) {
-            document.getElementById('customer-cpf').classList.add('shake', 'border-red-500');
-            setTimeout(() => document.getElementById('customer-cpf').classList.remove('shake', 'border-red-500'), 500);
-            Utils.showToast('CPF inválido (deve ter 11 dígitos)');
-            return;
-        }
-
-        // Validação de CEP (8 dígitos)
-        const cepNumbers = cep.replace(/\D/g, '');
-        if (cepNumbers.length !== 8) {
-            document.getElementById('customer-cep').classList.add('shake', 'border-red-500');
-            setTimeout(() => document.getElementById('customer-cep').classList.remove('shake', 'border-red-500'), 500);
-            Utils.showToast('CEP inválido (deve ter 8 dígitos)');
-            return;
-        }
 
         if (AppState.cart.length === 0) {
             Utils.showToast('Carrinho vazio!');
@@ -1109,11 +1081,12 @@ const App = {
         }
 
         // Monta mensagem
-        let message = `🍕 *NOVO PEDIDO - PIZZARIA HIT*\n\n`;
-        message += `👤 *Cliente:* ${name}\n`;
-        message += `📋 *CPF:* ${cpf}\n`;
-        message += `📮 *CEP:* ${cep}\n`;
-        message += `📍 *Endereço:* ${address}\n\n`;
+        let message = `⏳ *AGUARDE! Um atendente já vai atender você para finalizar o pedido e pegar o restante dos dados.*\n\n`;
+        message += `━━━━━━━━━━━━━━━━━━━━\n`;
+        message += `🍕 *NOVO PEDIDO - PIZZARIA HIT*\n\n`;
+        if (name) message += `👤 *Cliente:* ${name}\n`;
+        if (address) message += `📍 *Endereço:* ${address}\n`;
+        if (name || address) message += `\n`;
         message += `━━━━━━━━━━━━━━━━━━━━\n`;
         message += `📋 *ITENS DO PEDIDO:*\n\n`;
 
@@ -1126,7 +1099,6 @@ const App = {
         const total = AppState.cart.reduce((sum, item) => sum + item.price, 0);
         message += `━━━━━━━━━━━━━━━━━━━━\n`;
         message += `💵 *TOTAL: ${Utils.formatCurrency(total)}*\n\n`;
-        message += `📝 *Observações:* ${obs}\n\n`;
         message += `Obrigado pela preferência! 🎉`;
 
         // Codifica e abre WhatsApp
@@ -1140,10 +1112,7 @@ const App = {
         Render.updateCartCount();
         this.closeCart();
         document.getElementById('customer-name').value = '';
-        document.getElementById('customer-cpf').value = '';
-        document.getElementById('customer-cep').value = '';
         document.getElementById('customer-address').value = '';
-        document.getElementById('customer-obs').value = '';
     }
 };
 

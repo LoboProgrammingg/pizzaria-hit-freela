@@ -17,6 +17,11 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
+/* Safe area para dispositivos móveis */
+.safe-area-bottom {
+    padding-bottom: max(1rem, env(safe-area-inset-bottom));
+}
+
 /* Esconder scrollbar horizontal nas categorias */
 .scrollbar-hide::-webkit-scrollbar {
     display: none;

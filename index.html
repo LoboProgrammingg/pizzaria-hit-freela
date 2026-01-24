@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Pizzaria Hit - Cardápio Digital</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#dc2626',
+                        secondary: '#991b1b',
+                        dark: '#1a1a1a',
+                        accent: '#f59e0b'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-100 min-h-screen pb-24">
+    <!-- Header Sticky -->
+    <header class="sticky top-0 z-40 bg-dark shadow-lg">
+        <div class="container mx-auto px-4 py-3 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <img src="media/company/logo_no_bg.png" alt="Pizzaria Hit" class="h-12 w-12 object-contain" onerror="this.src='https://placehold.co/48?text=Logo'">
+                <div>
+                    <h1 class="text-white font-bold text-lg">Pizzaria Hit</h1>
+                    <div id="status-badge" class="text-xs px-2 py-0.5 rounded-full inline-block"></div>
+                </div>
+            </div>
+            <div class="text-right text-white text-xs">
+                <p><i class="fas fa-clock mr-1"></i>18:00 - 23:00</p>
+                <p class="text-gray-400">Segunda fechado</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Barra de Busca -->
+    <div class="bg-white border-b px-4 py-3">
+        <div class="relative">
+            <i class="fas fa-search absolute left-4 top-1/2 -translate-y-1/2 text-gray-400"></i>
+            <input type="text" id="search-input" 
+                   class="w-full pl-12 pr-4 py-3 bg-gray-100 rounded-xl border-0 focus:ring-2 focus:ring-primary focus:bg-white transition-all"
+                   placeholder="Buscar pizza, bebida...">
+            <button id="clear-search" class="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 hidden">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Navegação de Categorias -->
+    <nav class="sticky top-[76px] z-30 bg-white shadow-md">
+        <div class="flex overflow-x-auto scrollbar-hide py-3 px-4 gap-3" id="category-nav">
+            <button data-category="pizzas-salgadas" class="category-btn active flex-shrink-0 px-4 py-2 rounded-full bg-primary text-white font-semibold text-sm whitespace-nowrap transition-all">
+                <i class="fas fa-pizza-slice mr-2"></i>Pizzas Salgadas
+            </button>
+            <button data-category="pizzas-doces" class="category-btn flex-shrink-0 px-4 py-2 rounded-full bg-gray-200 text-gray-700 font-semibold text-sm whitespace-nowrap transition-all">
+                <i class="fas fa-cookie mr-2"></i>Pizzas Doces
+            </button>
+            <button data-category="bebidas" class="category-btn flex-shrink-0 px-4 py-2 rounded-full bg-gray-200 text-gray-700 font-semibold text-sm whitespace-nowrap transition-all">
+                <i class="fas fa-glass-water mr-2"></i>Bebidas
+            </button>
+            <button data-category="sucos" class="category-btn flex-shrink-0 px-4 py-2 rounded-full bg-gray-200 text-gray-700 font-semibold text-sm whitespace-nowrap transition-all">
+                <i class="fas fa-blender mr-2"></i>Sucos
+            </button>
+            <button data-category="cervejas" class="category-btn flex-shrink-0 px-4 py-2 rounded-full bg-gray-200 text-gray-700 font-semibold text-sm whitespace-nowrap transition-all">
+                <i class="fas fa-beer-mug-empty mr-2"></i>Cervejas
+            </button>
+        </div>
+    </nav>
+
+    <!-- Container Principal -->
+    <main class="container mx-auto px-4 py-6">
+        <!-- Seção Pizzas Salgadas -->
+        <section id="pizzas-salgadas" class="menu-section">
+            <h2 class="text-2xl font-bold text-gray-800 mb-4 flex items-center">
+                <i class="fas fa-pizza-slice text-primary mr-3"></i>Pizzas Salgadas
+            </h2>
+            <div id="pizzas-salgadas-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"></div>
+        </section>
+
+        <!-- Seção Pizzas Doces -->
+        <section id="pizzas-doces" class="menu-section hidden">
+            <h2 class="text-2xl font-bold text-gray-800 mb-4 flex items-center">
+                <i class="fas fa-cookie text-primary mr-3"></i>Pizzas Doces
+            </h2>
+            <div id="pizzas-doces-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"></div>
+        </section>
+
+        <!-- Seção Bebidas -->
+        <section id="bebidas" class="menu-section hidden">
+            <h2 class="text-2xl font-bold text-gray-800 mb-4 flex items-center">
+                <i class="fas fa-glass-water text-primary mr-3"></i>Bebidas
+            </h2>
+            <div id="bebidas-grid" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"></div>
+        </section>
+
+        <!-- Seção Sucos -->
+        <section id="sucos" class="menu-section hidden">
+            <h2 class="text-2xl font-bold text-gray-800 mb-4 flex items-center">
+                <i class="fas fa-blender text-primary mr-3"></i>Sucos Naturais
+            </h2>
+            <div id="sucos-grid" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"></div>
+        </section>
+
+        <!-- Seção Cervejas -->
+        <section id="cervejas" class="menu-section hidden">
+            <h2 class="text-2xl font-bold text-gray-800 mb-4 flex items-center">
+                <i class="fas fa-beer-mug-empty text-primary mr-3"></i>Cervejas
+            </h2>
+            <div id="cervejas-grid" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"></div>
+        </section>
+
+        <!-- Seção Resultados de Busca -->
+        <section id="search-results" class="menu-section hidden">
+            <h2 class="text-2xl font-bold text-gray-800 mb-4 flex items-center">
+                <i class="fas fa-search text-primary mr-3"></i>Resultados da Busca
+            </h2>
+            <div id="search-results-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"></div>
+            <div id="no-results" class="hidden text-center py-12 text-gray-400">
+                <i class="fas fa-search text-5xl mb-4"></i>
+                <p class="text-lg">Nenhum item encontrado</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Botão Carrinho Flutuante -->
+    <button id="cart-float-btn" class="fixed bottom-6 right-6 z-50 bg-primary hover:bg-secondary text-white w-16 h-16 rounded-full shadow-2xl flex items-center justify-center transition-all transform hover:scale-110">
+        <i class="fas fa-shopping-cart text-2xl"></i>
+        <span id="cart-count" class="absolute -top-1 -right-1 bg-accent text-dark text-xs font-bold w-6 h-6 rounded-full flex items-center justify-center hidden">0</span>
+    </button>
+
+    <!-- Modal de Personalização de Pizza -->
+    <div id="pizza-modal" class="fixed inset-0 z-50 hidden">
+        <div class="absolute inset-0 bg-black/70 backdrop-blur-sm" id="modal-overlay"></div>
+        <div class="absolute bottom-0 left-0 right-0 bg-white rounded-t-3xl max-h-[90vh] overflow-hidden animate-slide-up">
+            <!-- Header do Modal -->
+            <div class="sticky top-0 bg-white border-b px-4 py-3 flex items-center justify-between z-10">
+                <h3 id="modal-title" class="text-lg font-bold text-gray-800">Personalizar Pizza</h3>
+                <button id="close-modal" class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center">
+                    <i class="fas fa-times text-gray-600"></i>
+                </button>
+            </div>
+
+            <!-- Stepper -->
+            <div class="px-4 py-3 bg-gray-50 border-b">
+                <div class="flex items-center justify-between">
+                    <div class="step-indicator flex items-center gap-2" data-step="1">
+                        <span class="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center text-sm font-bold">1</span>
+                        <span class="text-sm font-medium text-gray-800">Tamanho</span>
+                    </div>
+                    <div class="h-0.5 flex-1 mx-2 bg-gray-300"></div>
+                    <div class="step-indicator flex items-center gap-2 opacity-50" data-step="2">
+                        <span class="w-8 h-8 rounded-full bg-gray-300 text-gray-600 flex items-center justify-center text-sm font-bold">2</span>
+                        <span class="text-sm font-medium text-gray-500">Sabores</span>
+                    </div>
+                    <div class="h-0.5 flex-1 mx-2 bg-gray-300"></div>
+                    <div class="step-indicator flex items-center gap-2 opacity-50" data-step="3">
+                        <span class="w-8 h-8 rounded-full bg-gray-300 text-gray-600 flex items-center justify-center text-sm font-bold">3</span>
+                        <span class="text-sm font-medium text-gray-500">Adicionais</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Conteúdo do Modal -->
+            <div class="overflow-y-auto max-h-[60vh] p-4" id="modal-content">
+                <!-- Step 1: Tamanho -->
+                <div id="step-1" class="step-content">
+                    <h4 class="font-semibold text-gray-700 mb-3">Escolha o tamanho:</h4>
+                    <div class="space-y-3" id="size-options"></div>
+                </div>
+
+                <!-- Step 2: Sabores -->
+                <div id="step-2" class="step-content hidden">
+                    <div class="mb-4 p-3 bg-amber-50 border border-amber-200 rounded-lg">
+                        <p class="text-sm text-amber-800">
+                            <i class="fas fa-info-circle mr-2"></i>
+                            <span id="flavor-info">Selecione até X sabor(es). O preço será pelo sabor de maior valor.</span>
+                        </p>
+                    </div>
+                    <h4 class="font-semibold text-gray-700 mb-3">Escolha os sabores:</h4>
+                    <div class="space-y-2" id="flavor-options"></div>
+                </div>
+
+                <!-- Step 3: Adicionais -->
+                <div id="step-3" class="step-content hidden">
+                    <h4 class="font-semibold text-gray-700 mb-3">Tipo de Massa:</h4>
+                    <div class="flex gap-3 mb-6" id="massa-options">
+                        <label class="flex-1 cursor-pointer">
+                            <input type="radio" name="massa" value="tradicional" class="hidden peer" checked>
+                            <div class="p-3 border-2 rounded-xl text-center peer-checked:border-primary peer-checked:bg-red-50 transition-all">
+                                <i class="fas fa-circle text-2xl text-gray-400 peer-checked:text-primary mb-2"></i>
+                                <p class="font-medium">Tradicional</p>
+                                <p class="text-xs text-gray-500">Incluso</p>
+                            </div>
+                        </label>
+                        <label class="flex-1 cursor-pointer">
+                            <input type="radio" name="massa" value="fina" class="hidden peer">
+                            <div class="p-3 border-2 rounded-xl text-center peer-checked:border-primary peer-checked:bg-red-50 transition-all">
+                                <i class="fas fa-minus text-2xl text-gray-400 peer-checked:text-primary mb-2"></i>
+                                <p class="font-medium">Fina</p>
+                                <p class="text-xs text-gray-500">Incluso</p>
+                            </div>
+                        </label>
+                    </div>
+
+                    <h4 class="font-semibold text-gray-700 mb-3">Borda Recheada:</h4>
+                    <div class="grid grid-cols-2 gap-3" id="borda-options"></div>
+                </div>
+            </div>
+
+            <!-- Footer do Modal -->
+            <div class="sticky bottom-0 bg-white border-t p-4 flex items-center justify-between gap-4">
+                <button id="prev-step" class="px-6 py-3 rounded-xl bg-gray-200 text-gray-700 font-semibold hidden">
+                    <i class="fas fa-arrow-left mr-2"></i>Voltar
+                </button>
+                <div class="flex-1 text-right">
+                    <p class="text-sm text-gray-500">Total</p>
+                    <p id="modal-total" class="text-2xl font-bold text-primary">R$ 0,00</p>
+                </div>
+                <button id="next-step" class="px-6 py-3 rounded-xl bg-primary text-white font-semibold">
+                    Próximo<i class="fas fa-arrow-right ml-2"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal do Carrinho -->
+    <div id="cart-modal" class="fixed inset-0 z-50 hidden">
+        <div class="absolute inset-0 bg-black/70 backdrop-blur-sm" id="cart-overlay"></div>
+        <div class="absolute bottom-0 left-0 right-0 bg-white rounded-t-3xl max-h-[90vh] overflow-hidden animate-slide-up">
+            <div class="sticky top-0 bg-white border-b px-4 py-3 flex items-center justify-between z-10">
+                <h3 class="text-lg font-bold text-gray-800">
+                    <i class="fas fa-shopping-cart text-primary mr-2"></i>Seu Pedido
+                </h3>
+                <button id="close-cart" class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center">
+                    <i class="fas fa-times text-gray-600"></i>
+                </button>
+            </div>
+
+            <div class="overflow-y-auto max-h-[50vh] p-4" id="cart-items">
+                <!-- Itens do carrinho serão inseridos aqui -->
+            </div>
+
+            <!-- Checkout Section -->
+            <div class="border-t p-4 bg-gray-50">
+                <div class="mb-4">
+                    <label class="block text-sm font-medium text-gray-700 mb-1">Seu Nome *</label>
+                    <input type="text" id="customer-name" class="w-full px-4 py-3 border rounded-xl focus:ring-2 focus:ring-primary focus:border-primary" placeholder="Digite seu nome">
+                </div>
+                <div class="mb-4">
+                    <label class="block text-sm font-medium text-gray-700 mb-1">Endereço Completo *</label>
+                    <textarea id="customer-address" rows="2" class="w-full px-4 py-3 border rounded-xl focus:ring-2 focus:ring-primary focus:border-primary" placeholder="Rua, número, bairro, referência..."></textarea>
+                </div>
+            </div>
+
+            <div class="sticky bottom-0 bg-white border-t p-4">
+                <div class="flex items-center justify-between mb-4">
+                    <span class="text-lg font-semibold text-gray-700">Total:</span>
+                    <span id="cart-total" class="text-2xl font-bold text-primary">R$ 0,00</span>
+                </div>
+                <button id="checkout-btn" class="w-full py-4 rounded-xl bg-green-600 hover:bg-green-700 text-white font-bold text-lg flex items-center justify-center gap-3 transition-all">
+                    <i class="fab fa-whatsapp text-2xl"></i>
+                    Finalizar Pedido
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Bebida Simples -->
+    <div id="drink-modal" class="fixed inset-0 z-50 hidden">
+        <div class="absolute inset-0 bg-black/70 backdrop-blur-sm" id="drink-overlay"></div>
+        <div class="absolute bottom-0 left-0 right-0 bg-white rounded-t-3xl max-h-[60vh] overflow-hidden animate-slide-up">
+            <div class="sticky top-0 bg-white border-b px-4 py-3 flex items-center justify-between z-10">
+                <h3 id="drink-modal-title" class="text-lg font-bold text-gray-800">Adicionar Bebida</h3>
+                <button id="close-drink-modal" class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center">
+                    <i class="fas fa-times text-gray-600"></i>
+                </button>
+            </div>
+            <div class="p-4" id="drink-modal-content">
+                <div class="flex items-center gap-4 mb-6">
+                    <img id="drink-modal-image" src="" alt="" class="w-24 h-24 object-contain rounded-xl bg-gray-100">
+                    <div>
+                        <h4 id="drink-modal-name" class="font-bold text-lg text-gray-800"></h4>
+                        <p id="drink-modal-price" class="text-xl font-bold text-primary"></p>
+                    </div>
+                </div>
+                <div class="flex items-center justify-center gap-4 mb-6">
+                    <button id="drink-qty-minus" class="w-12 h-12 rounded-full bg-gray-200 text-gray-700 font-bold text-xl">-</button>
+                    <span id="drink-qty" class="text-2xl font-bold w-12 text-center">1</span>
+                    <button id="drink-qty-plus" class="w-12 h-12 rounded-full bg-primary text-white font-bold text-xl">+</button>
+                </div>
+            </div>
+            <div class="sticky bottom-0 bg-white border-t p-4">
+                <button id="add-drink-btn" class="w-full py-4 rounded-xl bg-primary hover:bg-secondary text-white font-bold text-lg transition-all">
+                    Adicionar ao Pedido
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -530,7 +530,6 @@ const App = {
      * Inicializa a aplicação
      */
     init() {
-        Render.updateStatusBadge();
         Render.renderMenu();
         this.setupEventListeners();
         this.setupCategoryNavigation();
@@ -568,6 +567,37 @@ const App = {
             searchInput.value = '';
             clearSearch.classList.add('hidden');
             this.clearSearch();
+        });
+
+        // Banner de informações
+        document.getElementById('info-btn').addEventListener('click', () => {
+            document.getElementById('info-banner').classList.toggle('hidden');
+        });
+        document.getElementById('close-info-banner').addEventListener('click', () => {
+            document.getElementById('info-banner').classList.add('hidden');
+        });
+
+        // Máscaras de CPF e CEP
+        document.getElementById('customer-cpf').addEventListener('input', (e) => {
+            let value = e.target.value.replace(/\D/g, '');
+            if (value.length > 11) value = value.slice(0, 11);
+            if (value.length > 9) {
+                value = value.replace(/(\d{3})(\d{3})(\d{3})(\d{1,2})/, '$1.$2.$3-$4');
+            } else if (value.length > 6) {
+                value = value.replace(/(\d{3})(\d{3})(\d{1,3})/, '$1.$2.$3');
+            } else if (value.length > 3) {
+                value = value.replace(/(\d{3})(\d{1,3})/, '$1.$2');
+            }
+            e.target.value = value;
+        });
+
+        document.getElementById('customer-cep').addEventListener('input', (e) => {
+            let value = e.target.value.replace(/\D/g, '');
+            if (value.length > 8) value = value.slice(0, 8);
+            if (value.length > 5) {
+                value = value.replace(/(\d{5})(\d{1,3})/, '$1-$2');
+            }
+            e.target.value = value;
         });
     },
 
@@ -1022,23 +1052,54 @@ const App = {
     },
 
     /**
+     * Valida campo e destaca erro
+     */
+    validateField(fieldId, message) {
+        const field = document.getElementById(fieldId);
+        const value = field.value.trim();
+        
+        if (!value) {
+            field.classList.add('shake', 'border-red-500');
+            setTimeout(() => field.classList.remove('shake', 'border-red-500'), 500);
+            field.focus();
+            Utils.showToast(message);
+            return false;
+        }
+        return true;
+    },
+
+    /**
      * Finaliza pedido via WhatsApp
      */
     checkout() {
         const name = document.getElementById('customer-name').value.trim();
+        const cpf = document.getElementById('customer-cpf').value.trim();
+        const cep = document.getElementById('customer-cep').value.trim();
         const address = document.getElementById('customer-address').value.trim();
+        const obs = document.getElementById('customer-obs').value.trim();
 
-        if (!name) {
-            document.getElementById('customer-name').classList.add('shake', 'border-red-500');
-            setTimeout(() => document.getElementById('customer-name').classList.remove('shake', 'border-red-500'), 500);
-            Utils.showToast('Informe seu nome');
+        // Validação de todos os campos obrigatórios
+        if (!this.validateField('customer-name', 'Informe seu nome completo')) return;
+        if (!this.validateField('customer-cpf', 'Informe seu CPF')) return;
+        if (!this.validateField('customer-cep', 'Informe seu CEP')) return;
+        if (!this.validateField('customer-address', 'Informe seu endereço completo')) return;
+        if (!this.validateField('customer-obs', 'Informe as observações do pedido')) return;
+
+        // Validação de CPF (11 dígitos)
+        const cpfNumbers = cpf.replace(/\D/g, '');
+        if (cpfNumbers.length !== 11) {
+            document.getElementById('customer-cpf').classList.add('shake', 'border-red-500');
+            setTimeout(() => document.getElementById('customer-cpf').classList.remove('shake', 'border-red-500'), 500);
+            Utils.showToast('CPF inválido (deve ter 11 dígitos)');
             return;
         }
 
-        if (!address) {
-            document.getElementById('customer-address').classList.add('shake', 'border-red-500');
-            setTimeout(() => document.getElementById('customer-address').classList.remove('shake', 'border-red-500'), 500);
-            Utils.showToast('Informe seu endereço');
+        // Validação de CEP (8 dígitos)
+        const cepNumbers = cep.replace(/\D/g, '');
+        if (cepNumbers.length !== 8) {
+            document.getElementById('customer-cep').classList.add('shake', 'border-red-500');
+            setTimeout(() => document.getElementById('customer-cep').classList.remove('shake', 'border-red-500'), 500);
+            Utils.showToast('CEP inválido (deve ter 8 dígitos)');
             return;
         }
 
@@ -1050,6 +1111,8 @@ const App = {
         // Monta mensagem
         let message = `🍕 *NOVO PEDIDO - PIZZARIA HIT*\n\n`;
         message += `👤 *Cliente:* ${name}\n`;
+        message += `📋 *CPF:* ${cpf}\n`;
+        message += `📮 *CEP:* ${cep}\n`;
         message += `📍 *Endereço:* ${address}\n\n`;
         message += `━━━━━━━━━━━━━━━━━━━━\n`;
         message += `📋 *ITENS DO PEDIDO:*\n\n`;
@@ -1063,6 +1126,7 @@ const App = {
         const total = AppState.cart.reduce((sum, item) => sum + item.price, 0);
         message += `━━━━━━━━━━━━━━━━━━━━\n`;
         message += `💵 *TOTAL: ${Utils.formatCurrency(total)}*\n\n`;
+        message += `📝 *Observações:* ${obs}\n\n`;
         message += `Obrigado pela preferência! 🎉`;
 
         // Codifica e abre WhatsApp
@@ -1071,12 +1135,15 @@ const App = {
         
         window.open(whatsappUrl, '_blank');
 
-        // Limpa carrinho
+        // Limpa carrinho e campos
         AppState.cart = [];
         Render.updateCartCount();
         this.closeCart();
         document.getElementById('customer-name').value = '';
+        document.getElementById('customer-cpf').value = '';
+        document.getElementById('customer-cep').value = '';
         document.getElementById('customer-address').value = '';
+        document.getElementById('customer-obs').value = '';
     }
 };
 

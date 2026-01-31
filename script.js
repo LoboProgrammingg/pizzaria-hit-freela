@@ -956,6 +956,16 @@ const App = {
         Render.updateCartCount();
         Utils.showToast('Pizza adicionada ao carrinho!');
         this.closePizzaModal();
+
+        // Meta Pixel - AddToCart Event
+        if (typeof fbq !== 'undefined') {
+            fbq('track', 'AddToCart', {
+                content_name: cartItem.name,
+                content_type: 'product',
+                value: cartItem.price,
+                currency: 'BRL'
+            });
+        }
     },
 
     /**
@@ -1021,6 +1031,16 @@ const App = {
         Render.updateCartCount();
         Utils.showToast(`${AppState.drinkQty}x ${AppState.currentDrink.name} adicionado!`);
         this.closeDrinkModal();
+
+        // Meta Pixel - AddToCart Event
+        if (typeof fbq !== 'undefined') {
+            fbq('track', 'AddToCart', {
+                content_name: AppState.currentDrink.name,
+                content_type: 'product',
+                value: AppState.currentDrink.price * AppState.drinkQty,
+                currency: 'BRL'
+            });
+        }
     },
 
     /**
@@ -1031,6 +1051,16 @@ const App = {
         Render.updateCartTotal();
         document.getElementById('cart-modal').classList.remove('hidden');
         document.body.style.overflow = 'hidden';
+
+        // Meta Pixel - InitiateCheckout Event
+        if (typeof fbq !== 'undefined' && AppState.cart.length > 0) {
+            const total = AppState.cart.reduce((sum, item) => sum + item.price, 0);
+            fbq('track', 'InitiateCheckout', {
+                value: total,
+                currency: 'BRL',
+                num_items: AppState.cart.length
+            });
+        }
     },
 
     /**
@@ -1106,6 +1136,14 @@ const App = {
         const whatsappUrl = `https://wa.me/${CONFIG.whatsapp}?text=${encodedMessage}`;
         
         window.open(whatsappUrl, '_blank');
+
+        // Meta Pixel - Contact Event (Pedido finalizado via WhatsApp)
+        if (typeof fbq !== 'undefined') {
+            fbq('track', 'Contact', {
+                value: total,
+                currency: 'BRL'
+            });
+        }
 
         // Limpa carrinho e campos
         AppState.cart = [];

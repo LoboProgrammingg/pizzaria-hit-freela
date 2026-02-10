@@ -51,61 +51,61 @@ const BORDAS = [
 // DADOS DO CARDÁPIO - PIZZAS SALGADAS
 // ============================================
 const PIZZAS_SALGADAS = [
-    { id: 1, name: 'Mussarela', description: 'Molho, mussarela, parmesão, azeitona e orégano', prices: [51.90, 73.90, 84.90, 98.90], image: null },
-    { id: 2, name: 'Portuguesa', description: 'Molho, mussarela, presunto, tomate, ovos, cebola, pimentão, azeitona e orégano', prices: [51.90, 73.90, 84.90, 98.90], image: 'media/flavors/Portuguesaa.jpeg' },
-    { id: 3, name: 'Tradicional', description: 'Molho, mussarela, presunto, azeitona e orégano', prices: [51.90, 73.90, 84.90, 98.90], image: 'media/flavors/Tradicional.jpeg' },
-    { id: 4, name: 'Napolitana', description: 'Molho, mussarela, tomate, parmesão, azeitona e orégano', prices: [51.90, 73.90, 84.90, 98.90], image: 'media/flavors/Napolitana.jpeg' },
-    { id: 5, name: 'Calabresa', description: 'Molho, mussarela, calabresa, cebola, azeitona e orégano', prices: [51.90, 73.90, 84.90, 98.90], image: 'media/flavors/Calabresa.jpeg' },
-    { id: 6, name: 'Calabresa Especial', description: 'Molho, calabresa moída, mussarela, catupiry, azeitona e orégano', prices: [51.90, 73.90, 84.90, 98.90], image: 'media/flavors/Calabresa-especial.jpeg' },
-    { id: 7, name: 'Toscana', description: 'Molho, calabresa moída, mussarela, catupiry, azeitona e orégano', prices: [51.90, 73.90, 84.90, 98.90], image: null },
-    { id: 8, name: 'Dom Camilo', description: 'Molho, mussarela, presunto, calabresa, creme de leite, azeitona e orégano', prices: [51.90, 73.90, 84.90, 98.90], image: null },
-    { id: 9, name: 'Mexicana', description: 'Molho, mussarela, pimenta jalapeño, carne moída, azeitona e orégano', prices: [51.90, 73.90, 84.90, 98.90], image: null },
-    { id: 10, name: 'Catupiry', description: 'Molho, mussarela, catupiry, azeitona e orégano', prices: [51.90, 73.90, 84.90, 98.90], image: null },
-    { id: 11, name: 'Frango com Catupiry', description: 'Molho, mussarela, peito de frango, catupiry, azeitona e orégano', prices: [51.90, 73.90, 84.90, 98.90], image: null },
-    { id: 12, name: 'Frango Especial', description: 'Molho, mussarela, peito de frango, cebola, tomate seco, manjericão, azeitona e orégano', prices: [53.90, 76.90, 93.90, 102.90], image: null },
-    { id: 13, name: 'À Brasileira', description: 'Molho, mussarela, peito de frango, milho verde, azeitona e orégano', prices: [51.90, 73.90, 84.90, 98.90], image: null },
-    { id: 14, name: 'Atum', description: 'Molho, mussarela, atum, cebola, azeitona e orégano', prices: [53.90, 76.90, 93.90, 102.90], image: 'media/flavors/Atum.jpeg' },
-    { id: 15, name: 'Pizza Hit', description: 'Molho, mussarela, catupiry, presunto, bacon, champignon, cebola, azeitona e orégano', prices: [51.90, 73.90, 84.90, 98.90], image: 'media/flavors/hit.jpeg' },
-    { id: 16, name: 'Marguerita', description: 'Molho, mussarela, manjericão fresco, tomate, parmesão, azeitona e orégano', prices: [51.90, 73.90, 84.90, 98.90], image: null },
-    { id: 17, name: 'Marguerita Especial', description: 'Molho, mussarela, manjericão fresco, tomate, alho gratinado, tomate seco, parmesão, azeitona e orégano', prices: [51.90, 73.90, 84.90, 98.90], image: null },
-    { id: 18, name: 'Aliche', description: 'Molho, mussarela, aliche, azeitona e orégano', prices: [53.90, 76.90, 93.90, 102.90], image: null },
-    { id: 19, name: 'Bacon', description: 'Molho, mussarela, bacon, ovos, azeitona e orégano', prices: [51.90, 73.90, 84.90, 98.90], image: null },
-    { id: 20, name: 'Alho e Óleo', description: 'Molho, mussarela, alho frito, azeite, azeitona e orégano', prices: [51.90, 73.90, 84.90, 98.90], image: null },
-    { id: 21, name: 'Lombo ao Creme', description: 'Molho, mussarela, lombinho canadense, requeijão cremoso, tomate, azeitona e orégano', prices: [51.90, 73.90, 84.90, 98.90], image: null },
-    { id: 22, name: 'Genovesa', description: 'Molho, mussarela, pesto genovês, tomate, azeitona e orégano', prices: [51.90, 73.90, 84.90, 98.90], image: null },
-    { id: 23, name: 'Palmito', description: 'Molho, mussarela, palmito, azeitona e orégano', prices: [51.90, 73.90, 84.90, 98.90], image: null },
-    { id: 24, name: 'Quatro Queijos', description: 'Molho, mussarela, provolone, catupiry, parmesão, azeitona e orégano', prices: [51.90, 73.90, 84.90, 98.90], image: null },
-    { id: 25, name: 'Super Hit', description: 'Molho, mussarela, catupiry, presunto, calabresa, bacon, champignon, requeijão, cebola, azeitona e orégano', prices: [53.90, 76.90, 93.90, 102.90], image: null },
-    { id: 26, name: 'Caprese', description: 'Molho, mussarela, tomate, manjericão, mussarela de búfala, pasta de azeitona preta, azeitona e orégano', prices: [53.90, 76.90, 93.90, 102.90], image: 'media/flavors/caprese.jpeg' },
-    { id: 27, name: 'Pizza do Chef', description: 'Molho, mussarela, ricota, tomate cereja, manjericão, azeitona e orégano', prices: [53.90, 76.90, 93.90, 102.90], image: null },
-    { id: 28, name: 'Dom Valério', description: 'Molho, mussarela, bacon, calabresa, catupiry, azeitona e orégano', prices: [53.90, 76.90, 93.90, 102.90], image: null },
-    { id: 29, name: 'Moda Aracì', description: 'Molho, mussarela, frango, milho, catupiry, azeitona e orégano', prices: [51.90, 73.90, 84.90, 98.90], image: null },
-    { id: 30, name: 'Vegetariana', description: 'Molho, mussarela, champignon, tomate, cebola, pimentão verde, azeitona e orégano', prices: [53.90, 76.90, 93.90, 102.90], image: null },
-    { id: 31, name: 'Escarola', description: 'Molho, mussarela, escarola refogada, alho, azeitona e orégano', prices: [51.90, 73.90, 84.90, 98.90], image: null },
-    { id: 32, name: 'Brócolis', description: 'Molho, mussarela, brócolis, alho, azeitona e orégano', prices: [51.90, 73.90, 84.90, 98.90], image: 'media/flavors/Brocolis.jpeg' },
-    { id: 33, name: 'Brócolis com Berinjela', description: 'Molho, mussarela, brócolis, berinjela, azeitona e orégano', prices: [51.90, 73.90, 84.90, 98.90], image: null },
-    { id: 34, name: 'Berinjela', description: 'Molho, mussarela, berinjela, tomate, azeitona e orégano', prices: [53.90, 76.90, 93.90, 102.90], image: null },
-    { id: 35, name: 'Rúcula', description: 'Molho, mussarela, rúcula, tomate seco, mussarela de búfala, azeitona e orégano', prices: [53.90, 76.90, 93.90, 102.90], image: null },
-    { id: 36, name: 'Milho', description: 'Molho, mussarela, milho verde, azeitona e orégano', prices: [51.90, 73.90, 84.90, 98.90], image: 'media/flavors/milho.jpeg' },
-    { id: 37, name: 'Milho com Catupiry', description: 'Molho, mussarela, milho verde, catupiry, azeitona e orégano', prices: [51.90, 73.90, 84.90, 98.90], image: null },
-    { id: 38, name: 'Super Portuguesa', description: 'Molho, mussarela, presunto, calabresa, tomate, ovos, cebola, azeitona, pimentão e orégano', prices: [53.90, 76.90, 93.90, 102.90], image: null },
-    { id: 39, name: 'Super Quatro Queijos', description: 'Molho, mussarela, provolone, catupiry, parmesão, gorgonzola, azeitona e orégano', prices: [53.90, 76.90, 93.90, 102.90], image: null },
-    { id: 40, name: 'Strogonoff de Frango', description: 'Molho, mussarela, peito de frango, creme de leite, palmito, azeitona, orégano e batata palha', prices: [53.90, 76.90, 93.90, 102.90], image: null },
-    { id: 41, name: 'Strogonoff de Filé', description: 'Molho, mussarela, filé, creme de leite, champignon, batata palha, azeitona e orégano', prices: [53.90, 76.90, 93.90, 102.90], image: 'media/flavors/Strogonoff-file.jpeg' },
-    { id: 42, name: 'Filé Especial', description: 'Molho, mussarela, filé, tomate cereja, azeitona e orégano', prices: [53.90, 76.90, 93.90, 102.90], image: null },
-    { id: 43, name: 'Pantaneira', description: 'Molho, mussarela, carne seca, cebola, pimenta, azeitona e orégano', prices: [53.90, 76.90, 93.90, 102.90], image: 'media/flavors/Pantanera.jpeg' },
-    { id: 44, name: 'Suíça', description: 'Molho, mussarela, presunto, queijo suíço, azeitona e orégano', prices: [51.90, 73.90, 84.90, 98.90], image: null },
-    { id: 45, name: 'Camarão', description: 'Molho, mussarela, camarão, catupiry, azeitona e orégano', prices: [71.90, 81.90, 112.90, 119.90], image: null },
-    { id: 46, name: 'Bacalhau', description: 'Molho, mussarela, bacalhau, cebola, pimentão, azeitona e orégano', prices: [71.90, 81.90, 112.90, 119.90], image: null },
-    { id: 47, name: 'Mussarela de Búfala', description: 'Molho, mussarela de búfala, tomate, manjericão, azeitona e orégano', prices: [53.90, 76.90, 93.90, 102.90], image: null },
-    { id: 48, name: 'Abobrinha', description: 'Molho, abobrinha refogada, mussarela de búfala, parmesão, azeitona e orégano', prices: [53.90, 76.90, 93.90, 102.90], image: 'media/flavors/Abobrinha.jpeg' },
-    { id: 49, name: 'Light', description: 'Molho, mussarela, ricota, tomate seco, manjericão, azeitona e orégano', prices: [53.90, 76.90, 93.90, 102.90], image: null },
-    { id: 50, name: 'Pepperone', description: 'Molho, mussarela, pepperone, azeitona e orégano', prices: [53.90, 76.90, 93.90, 102.90], image: 'media/flavors/Peperone.jpeg' },
-    { id: 51, name: 'Peito de Peru', description: 'Molho, mussarela, peito de peru, catupiry, azeitona e orégano', prices: [51.90, 73.90, 84.90, 98.90], image: null },
-    { id: 52, name: 'Basílica', description: 'Molho, mussarela, tomate cereja, pesto de rúcula, azeitona e orégano', prices: [53.90, 76.90, 93.90, 102.90], image: null },
-    { id: 53, name: 'Caprese com Pepperone', description: 'Molho, mussarela, pepperone, tomate, mussarela de búfala, manjericão, pasta de azeitona preta e orégano', prices: [53.90, 76.90, 93.90, 102.90], image: null },
-    { id: 54, name: 'Presunto de Parma', description: 'Molho de tomate, mussarela de Búfala, tomate cereja, presunto de Parma, azeitona preta e orégano', prices: [71.90, 81.90, 112.90, 119.90], image: null },
-    { id: 55, name: 'Vegetariana Hit', description: 'Molho de tomate, mussarela de Búfala, tomate cereja, palmito, brócolis, abobrinha, azeitona e orégano', prices: [71.90, 81.90, 112.90, 119.90], image: null }
+    { id: 1, name: 'Mussarela', description: 'Molho, mussarela, parmesão, azeitona e orégano', prices: [51.90, 73.90, 84.90, 98.90], image: 'media/flavors/ifood_ready/Mussarela.jpeg' },
+    { id: 2, name: 'Portuguesa', description: 'Molho, mussarela, presunto, tomate, ovos, cebola, pimentão, azeitona e orégano', prices: [51.90, 73.90, 84.90, 98.90], image: 'media/flavors/ifood_ready/Portuguesaa.jpeg' },
+    { id: 3, name: 'Tradicional', description: 'Molho, mussarela, presunto, azeitona e orégano', prices: [51.90, 73.90, 84.90, 98.90], image: 'media/flavors/ifood_ready/Tradicional.jpeg' },
+    { id: 4, name: 'Napolitana', description: 'Molho, mussarela, tomate, parmesão, azeitona e orégano', prices: [51.90, 73.90, 84.90, 98.90], image: 'media/flavors/ifood_ready/Napolitana.jpeg' },
+    { id: 5, name: 'Calabresa', description: 'Molho, mussarela, calabresa, cebola, azeitona e orégano', prices: [51.90, 73.90, 84.90, 98.90], image: 'media/flavors/ifood_ready/Calabresa.jpeg' },
+    { id: 6, name: 'Calabresa Especial', description: 'Molho, calabresa moída, mussarela, catupiry, azeitona e orégano', prices: [51.90, 73.90, 84.90, 98.90], image: 'media/flavors/ifood_ready/Calabresa-especial.jpeg' },
+    { id: 7, name: 'Toscana', description: 'Molho, calabresa moída, mussarela, catupiry, azeitona e orégano', prices: [51.90, 73.90, 84.90, 98.90], image: 'media/flavors/ifood_ready/Toscana.jpeg' },
+    { id: 8, name: 'Dom Camilo', description: 'Molho, mussarela, presunto, calabresa, creme de leite, azeitona e orégano', prices: [51.90, 73.90, 84.90, 98.90], image: 'media/flavors/ifood_ready/Dom-Camilo.jpeg' },
+    { id: 9, name: 'Mexicana', description: 'Molho, mussarela, pimenta jalapeño, carne moída, azeitona e orégano', prices: [51.90, 73.90, 84.90, 98.90], image: 'media/flavors/ifood_ready/Mexicana.jpeg' },
+    { id: 10, name: 'Catupiry', description: 'Molho, mussarela, catupiry, azeitona e orégano', prices: [51.90, 73.90, 84.90, 98.90], image: 'media/flavors/ifood_ready/Catupiry.jpeg' },
+    { id: 11, name: 'Frango com Catupiry', description: 'Molho, mussarela, peito de frango, catupiry, azeitona e orégano', prices: [51.90, 73.90, 84.90, 98.90], image: 'media/flavors/ifood_ready/Frango-Catupiry.jpeg' },
+    { id: 12, name: 'Frango Especial', description: 'Molho, mussarela, peito de frango, cebola, tomate seco, manjericão, azeitona e orégano', prices: [53.90, 76.90, 93.90, 102.90], image: 'media/flavors/ifood_ready/Frango-especial.jpeg' },
+    { id: 13, name: 'À Brasileira', description: 'Molho, mussarela, peito de frango, milho verde, azeitona e orégano', prices: [51.90, 73.90, 84.90, 98.90], image: 'media/flavors/ifood_ready/A-Brasileira.jpeg' },
+    { id: 14, name: 'Atum', description: 'Molho, mussarela, atum, cebola, azeitona e orégano', prices: [53.90, 76.90, 93.90, 102.90], image: 'media/flavors/ifood_ready/Atum.jpeg' },
+    { id: 15, name: 'Pizza Hit', description: 'Molho, mussarela, catupiry, presunto, bacon, champignon, cebola, azeitona e orégano', prices: [51.90, 73.90, 84.90, 98.90], image: 'media/flavors/ifood_ready/hit.jpeg' },
+    { id: 16, name: 'Marguerita', description: 'Molho, mussarela, manjericão fresco, tomate, parmesão, azeitona e orégano', prices: [51.90, 73.90, 84.90, 98.90], image: 'media/flavors/ifood_ready/Margherita.jpeg' },
+    { id: 17, name: 'Marguerita Especial', description: 'Molho, mussarela, manjericão fresco, tomate, alho gratinado, tomate seco, parmesão, azeitona e orégano', prices: [51.90, 73.90, 84.90, 98.90], image: 'media/flavors/ifood_ready/Margherita-especial.jpeg' },
+    { id: 18, name: 'Aliche', description: 'Molho, mussarela, aliche, azeitona e orégano', prices: [53.90, 76.90, 93.90, 102.90], image: 'media/flavors/ifood_ready/Aliche.jpeg' },
+    { id: 19, name: 'Bacon', description: 'Molho, mussarela, bacon, ovos, azeitona e orégano', prices: [51.90, 73.90, 84.90, 98.90], image: 'media/flavors/ifood_ready/Bacon.jpeg' },
+    { id: 20, name: 'Alho e Óleo', description: 'Molho, mussarela, alho frito, azeite, azeitona e orégano', prices: [51.90, 73.90, 84.90, 98.90], image: 'media/flavors/ifood_ready/Alho-e-Oleo.jpeg' },
+    { id: 21, name: 'Lombo ao Creme', description: 'Molho, mussarela, lombinho canadense, requeijão cremoso, tomate, azeitona e orégano', prices: [51.90, 73.90, 84.90, 98.90], image: 'media/flavors/ifood_ready/Lombo-ao-Creme.jpeg' },
+    { id: 22, name: 'Genovesa', description: 'Molho, mussarela, pesto genovês, tomate, azeitona e orégano', prices: [51.90, 73.90, 84.90, 98.90], image: 'media/flavors/ifood_ready/Genovesa.jpeg' },
+    { id: 23, name: 'Palmito', description: 'Molho, mussarela, palmito, azeitona e orégano', prices: [51.90, 73.90, 84.90, 98.90], image: 'media/flavors/ifood_ready/Palmito.jpeg' },
+    { id: 24, name: 'Quatro Queijos', description: 'Molho, mussarela, provolone, catupiry, parmesão, azeitona e orégano', prices: [51.90, 73.90, 84.90, 98.90], image: 'media/flavors/ifood_ready/Quatro-Queijos.jpeg' },
+    { id: 25, name: 'Super Hit', description: 'Molho, mussarela, catupiry, presunto, calabresa, bacon, champignon, requeijão, cebola, azeitona e orégano', prices: [53.90, 76.90, 93.90, 102.90], image: 'media/flavors/ifood_ready/Super-hit.jpeg' },
+    { id: 26, name: 'Caprese', description: 'Molho, mussarela, tomate, manjericão, mussarela de búfala, pasta de azeitona preta, azeitona e orégano', prices: [53.90, 76.90, 93.90, 102.90], image: 'media/flavors/ifood_ready/caprese.jpeg' },
+    { id: 27, name: 'Pizza do Chef', description: 'Molho, mussarela, ricota, tomate cereja, manjericão, azeitona e orégano', prices: [53.90, 76.90, 93.90, 102.90], image: 'media/flavors/ifood_ready/Pizza-do-chef.jpeg' },
+    { id: 28, name: 'Dom Valério', description: 'Molho, mussarela, bacon, calabresa, catupiry, azeitona e orégano', prices: [53.90, 76.90, 93.90, 102.90], image: 'media/flavors/ifood_ready/Dom-Valerio.jpeg' },
+    { id: 29, name: 'Moda Aracì', description: 'Molho, mussarela, frango, milho, catupiry, azeitona e orégano', prices: [51.90, 73.90, 84.90, 98.90], image: 'media/flavors/ifood_ready/moda-araci.jpeg' },
+    { id: 30, name: 'Vegetariana', description: 'Molho, mussarela, champignon, tomate, cebola, pimentão verde, azeitona e orégano', prices: [53.90, 76.90, 93.90, 102.90], image: 'media/flavors/ifood_ready/Vegetariana.jpeg' },
+    { id: 31, name: 'Escarola', description: 'Molho, mussarela, escarola refogada, alho, azeitona e orégano', prices: [51.90, 73.90, 84.90, 98.90], image: 'media/flavors/ifood_ready/Escarola.jpeg' },
+    { id: 32, name: 'Brócolis', description: 'Molho, mussarela, brócolis, alho, azeitona e orégano', prices: [51.90, 73.90, 84.90, 98.90], image: 'media/flavors/ifood_ready/Brocolis.jpeg' },
+    { id: 33, name: 'Brócolis com Berinjela', description: 'Molho, mussarela, brócolis, berinjela, azeitona e orégano', prices: [51.90, 73.90, 84.90, 98.90], image: 'media/flavors/ifood_ready/brocolis-berinjela.jpeg' },
+    { id: 34, name: 'Berinjela', description: 'Molho, mussarela, berinjela, tomate, azeitona e orégano', prices: [53.90, 76.90, 93.90, 102.90], image: 'media/flavors/ifood_ready/Berinjela.jpeg' },
+    { id: 35, name: 'Rúcula', description: 'Molho, mussarela, rúcula, tomate seco, mussarela de búfala, azeitona e orégano', prices: [53.90, 76.90, 93.90, 102.90], image: 'media/flavors/ifood_ready/Rucula.jpeg' },
+    { id: 36, name: 'Milho', description: 'Molho, mussarela, milho verde, azeitona e orégano', prices: [51.90, 73.90, 84.90, 98.90], image: 'media/flavors/ifood_ready/milho.jpeg' },
+    { id: 37, name: 'Milho com Catupiry', description: 'Molho, mussarela, milho verde, catupiry, azeitona e orégano', prices: [51.90, 73.90, 84.90, 98.90], image: 'media/flavors/ifood_ready/Milho-com-catupiry.jpeg' },
+    { id: 38, name: 'Super Portuguesa', description: 'Molho, mussarela, presunto, calabresa, tomate, ovos, cebola, azeitona, pimentão e orégano', prices: [53.90, 76.90, 93.90, 102.90], image: 'media/flavors/ifood_ready/Super-Portuguesa.jpeg' },
+    { id: 39, name: 'Super Quatro Queijos', description: 'Molho, mussarela, provolone, catupiry, parmesão, gorgonzola, azeitona e orégano', prices: [53.90, 76.90, 93.90, 102.90], image: 'media/flavors/ifood_ready/Super-quatro-queijos.jpeg' },
+    { id: 40, name: 'Strogonoff de Frango', description: 'Molho, mussarela, peito de frango, creme de leite, palmito, azeitona, orégano e batata palha', prices: [53.90, 76.90, 93.90, 102.90], image: 'media/flavors/ifood_ready/strogonoff-frango.jpeg' },
+    { id: 41, name: 'Strogonoff de Filé', description: 'Molho, mussarela, filé, creme de leite, champignon, batata palha, azeitona e orégano', prices: [53.90, 76.90, 93.90, 102.90], image: 'media/flavors/ifood_ready/Strogonoff-file.jpeg' },
+    { id: 42, name: 'Filé Especial', description: 'Molho, mussarela, filé, tomate cereja, azeitona e orégano', prices: [53.90, 76.90, 93.90, 102.90], image: 'media/flavors/ifood_ready/File-Especial.jpeg' },
+    { id: 43, name: 'Pantaneira', description: 'Molho, mussarela, carne seca, cebola, pimenta, azeitona e orégano', prices: [53.90, 76.90, 93.90, 102.90], image: 'media/flavors/ifood_ready/Pantanera.jpeg' },
+    { id: 44, name: 'Suíça', description: 'Molho, mussarela, presunto, queijo suíço, azeitona e orégano', prices: [51.90, 73.90, 84.90, 98.90], image: 'media/flavors/ifood_ready/Suica.jpeg' },
+    { id: 45, name: 'Camarão', description: 'Molho, mussarela, camarão, catupiry, azeitona e orégano', prices: [71.90, 81.90, 112.90, 119.90], image: 'media/flavors/ifood_ready/Camarao.jpeg' },
+    { id: 46, name: 'Bacalhau', description: 'Molho, mussarela, bacalhau, cebola, pimentão, azeitona e orégano', prices: [71.90, 81.90, 112.90, 119.90], image: 'media/flavors/ifood_ready/Bacalhau.jpeg' },
+    { id: 47, name: 'Mussarela de Búfala', description: 'Molho, mussarela de búfala, tomate, manjericão, azeitona e orégano', prices: [53.90, 76.90, 93.90, 102.90], image: 'media/flavors/ifood_ready/Mussarela-bufala.jpeg' },
+    { id: 48, name: 'Abobrinha', description: 'Molho, abobrinha refogada, mussarela de búfala, parmesão, azeitona e orégano', prices: [53.90, 76.90, 93.90, 102.90], image: 'media/flavors/ifood_ready/Abobrinha.jpeg' },
+    { id: 49, name: 'Light', description: 'Molho, mussarela, ricota, tomate seco, manjericão, azeitona e orégano', prices: [53.90, 76.90, 93.90, 102.90], image: 'media/flavors/ifood_ready/Light.jpeg' },
+    { id: 50, name: 'Pepperone', description: 'Molho, mussarela, pepperone, azeitona e orégano', prices: [53.90, 76.90, 93.90, 102.90], image: 'media/flavors/ifood_ready/Peperone.jpeg' },
+    { id: 51, name: 'Peito de Peru', description: 'Molho, mussarela, peito de peru, catupiry, azeitona e orégano', prices: [51.90, 73.90, 84.90, 98.90], image: 'media/flavors/ifood_ready/Peito-de-peru.jpeg' },
+    { id: 52, name: 'Basílica', description: 'Molho, mussarela, tomate cereja, pesto de rúcula, azeitona e orégano', prices: [53.90, 76.90, 93.90, 102.90], image: 'media/flavors/ifood_ready/basilica.jpeg' },
+    { id: 53, name: 'Caprese com Pepperone', description: 'Molho, mussarela, pepperone, tomate, mussarela de búfala, manjericão, pasta de azeitona preta e orégano', prices: [53.90, 76.90, 93.90, 102.90], image: 'media/flavors/ifood_ready/Caprese-com-peperone.jpeg' },
+    { id: 54, name: 'Presunto de Parma', description: 'Molho de tomate, mussarela de Búfala, tomate cereja, presunto de Parma, azeitona preta e orégano', prices: [71.90, 81.90, 112.90, 119.90], image: 'media/flavors/ifood_ready/presunto-de-parma.jpeg' },
+    { id: 55, name: 'Vegetariana Hit', description: 'Molho de tomate, mussarela de Búfala, tomate cereja, palmito, brócolis, abobrinha, azeitona e orégano', prices: [71.90, 81.90, 112.90, 119.90], image: 'media/flavors/ifood_ready/Vegetariana-Hit.jpeg' }
 ];
 
 // ============================================
@@ -115,10 +115,10 @@ const PIZZAS_DOCES = [
     { id: 101, name: 'California', description: 'Creme de leite, mussarela, lombo, figo, pêssego, ameixa e orégano', prices: [51.90, 73.90, 84.90, 98.90], image: null },
     { id: 102, name: 'Salada de Fruta', description: 'Creme de leite, mussarela, pêssego, figo, ameixa, cereja e orégano', prices: [51.90, 73.90, 84.90, 98.90], image: null },
     { id: 103, name: 'Romeu e Julieta', description: 'Creme de leite, mussarela, banana, doce de goiaba e canela', prices: [51.90, 73.90, 84.90, 98.90], image: null },
-    { id: 104, name: 'Banana', description: 'Creme de leite, mussarela, banana, leite condensado e canela', prices: [51.90, 73.90, 84.90, 98.90], image: null },
-    { id: 105, name: 'Chocolate com Granulado', description: 'Creme de leite, chocolate e granulado', prices: [51.90, 73.90, 84.90, 98.90], image: null },
-    { id: 106, name: 'Chocolate com Cereja', description: 'Creme de leite, chocolate e cereja', prices: [51.90, 73.90, 84.90, 98.90], image: null },
-    { id: 107, name: 'Chocolate com Côco', description: 'Creme de leite, chocolate e coco', prices: [51.90, 73.90, 84.90, 98.90], image: null },
+    { id: 104, name: 'Banana', description: 'Creme de leite, mussarela, banana, leite condensado e canela', prices: [51.90, 73.90, 84.90, 98.90], image: 'media/flavors/sweet_flavors/ifood_ready/banana.jpeg' },
+    { id: 105, name: 'Chocolate com Granulado', description: 'Creme de leite, chocolate e granulado', prices: [51.90, 73.90, 84.90, 98.90], image: 'media/flavors/sweet_flavors/ifood_ready/Chocolate.jpeg' },
+    { id: 106, name: 'Chocolate com Cereja', description: 'Creme de leite, chocolate e cereja', prices: [51.90, 73.90, 84.90, 98.90], image: 'media/flavors/sweet_flavors/ifood_ready/chocolate-cereja.jpeg' },
+    { id: 107, name: 'Chocolate com Côco', description: 'Creme de leite, chocolate e coco', prices: [51.90, 73.90, 84.90, 98.90], image: 'media/flavors/sweet_flavors/ifood_ready/chocolate-coco.jpeg' },
     { id: 108, name: 'Chocolate com Castanha', description: 'Creme de leite, chocolate e castanha de caju', prices: [51.90, 73.90, 84.90, 98.90], image: null },
     { id: 109, name: 'Chocolate com Banana', description: 'Creme de leite, mussarela, banana e chocolate', prices: [51.90, 73.90, 84.90, 98.90], image: null }
 ];
@@ -269,7 +269,7 @@ const Render = {
     },
 
     /**
-     * Renderiza card de pizza
+     * Renderiza card de pizza (compacto para 3 colunas)
      */
     createPizzaCard(pizza) {
         const minPrice = Math.min(...pizza.prices);
@@ -278,24 +278,15 @@ const Render = {
         const imageSrc = pizza.image || placeholder;
         
         return `
-            <div class="product-card bg-white rounded-2xl shadow-md overflow-hidden cursor-pointer" onclick="App.openPizzaModal(${pizza.id}, '${isDoce ? 'doce' : 'salgada'}')">
-                <div class="relative aspect-[4/3] overflow-hidden">
+            <div class="product-card bg-white rounded-xl shadow-sm overflow-hidden cursor-pointer active:scale-95 transition-transform" onclick="App.openPizzaModal(${pizza.id}, '${isDoce ? 'doce' : 'salgada'}')">
+                <div class="aspect-square overflow-hidden">
                     <img src="${imageSrc}" alt="${pizza.name}" 
                          class="w-full h-full object-cover"
                          onerror="this.src='${placeholder}'">
                 </div>
-                <div class="p-4">
-                    <h3 class="font-bold text-gray-800 text-lg mb-1">${pizza.name}</h3>
-                    <p class="text-gray-500 text-sm line-clamp-2 mb-3">${pizza.description}</p>
-                    <div class="flex items-center justify-between">
-                        <div>
-                            <span class="text-xs text-gray-400">a partir de</span>
-                            <p class="text-primary font-bold text-lg">${Utils.formatCurrency(minPrice)}</p>
-                        </div>
-                        <button class="bg-primary hover:bg-secondary text-white w-10 h-10 rounded-full flex items-center justify-center transition-all">
-                            <i class="fas fa-plus"></i>
-                        </button>
-                    </div>
+                <div class="p-2">
+                    <h3 class="font-semibold text-gray-800 text-xs leading-tight line-clamp-2 mb-1">${pizza.name}</h3>
+                    <p class="text-primary font-bold text-xs">${Utils.formatCurrency(minPrice)}</p>
                 </div>
             </div>
         `;
@@ -577,28 +568,6 @@ const App = {
             document.getElementById('info-banner').classList.add('hidden');
         });
 
-        // Máscaras de CPF e CEP
-        document.getElementById('customer-cpf').addEventListener('input', (e) => {
-            let value = e.target.value.replace(/\D/g, '');
-            if (value.length > 11) value = value.slice(0, 11);
-            if (value.length > 9) {
-                value = value.replace(/(\d{3})(\d{3})(\d{3})(\d{1,2})/, '$1.$2.$3-$4');
-            } else if (value.length > 6) {
-                value = value.replace(/(\d{3})(\d{3})(\d{1,3})/, '$1.$2.$3');
-            } else if (value.length > 3) {
-                value = value.replace(/(\d{3})(\d{1,3})/, '$1.$2');
-            }
-            e.target.value = value;
-        });
-
-        document.getElementById('customer-cep').addEventListener('input', (e) => {
-            let value = e.target.value.replace(/\D/g, '');
-            if (value.length > 8) value = value.slice(0, 8);
-            if (value.length > 5) {
-                value = value.replace(/(\d{5})(\d{1,3})/, '$1-$2');
-            }
-            e.target.value = value;
-        });
     },
 
     /**
@@ -671,14 +640,9 @@ const App = {
      * Mostra resultados da busca
      */
     showSearchResults(results) {
-        // Esconde todas as seções
-        document.querySelectorAll('.menu-section').forEach(s => s.classList.add('hidden'));
-        
-        // Remove active de categorias
-        document.querySelectorAll('.category-btn').forEach(btn => {
-            btn.classList.remove('active', 'bg-primary', 'text-white');
-            btn.classList.add('bg-gray-200', 'text-gray-700');
-        });
+        // Esconde todas as seções do cardápio
+        const allSections = document.getElementById('all-sections');
+        if (allSections) allSections.classList.add('hidden');
         
         // Mostra seção de resultados
         const section = document.getElementById('search-results');
@@ -709,44 +673,15 @@ const App = {
      */
     clearSearch() {
         document.getElementById('search-results').classList.add('hidden');
-        document.getElementById('pizzas-salgadas').classList.remove('hidden');
-        
-        // Reativa primeiro botão
-        const firstBtn = document.querySelector('.category-btn');
-        if (firstBtn) {
-            firstBtn.classList.add('active', 'bg-primary', 'text-white');
-            firstBtn.classList.remove('bg-gray-200', 'text-gray-700');
-        }
+        const allSections = document.getElementById('all-sections');
+        if (allSections) allSections.classList.remove('hidden');
     },
 
     /**
-     * Configura navegação de categorias
+     * Configura navegação de categorias (não mais necessário - layout único)
      */
     setupCategoryNavigation() {
-        const buttons = document.querySelectorAll('.category-btn');
-        buttons.forEach(btn => {
-            btn.addEventListener('click', () => {
-                const category = btn.dataset.category;
-                
-                // Limpa campo de busca
-                document.getElementById('search-input').value = '';
-                document.getElementById('clear-search').classList.add('hidden');
-                
-                // Atualiza botões ativos
-                buttons.forEach(b => {
-                    b.classList.remove('active', 'bg-primary', 'text-white');
-                    b.classList.add('bg-gray-200', 'text-gray-700');
-                });
-                btn.classList.add('active', 'bg-primary', 'text-white');
-                btn.classList.remove('bg-gray-200', 'text-gray-700');
-
-                // Mostra/esconde seções
-                document.querySelectorAll('.menu-section').forEach(section => {
-                    section.classList.add('hidden');
-                });
-                document.getElementById(category).classList.remove('hidden');
-            });
-        });
+        // Layout único - não há mais navegação por abas
     },
 
     /**

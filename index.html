@@ -89,7 +89,7 @@
     </div>
 
     <!-- Barra de Busca -->
-    <div class="bg-white border-b px-4 py-3">
+    <div class="bg-white border-b px-4 py-3 sticky top-[76px] z-30">
         <div class="relative">
             <i class="fas fa-search absolute left-4 top-1/2 -translate-y-1/2 text-gray-400"></i>
             <input type="text" id="search-input" 
@@ -101,80 +101,85 @@
         </div>
     </div>
 
-    <!-- Navegação de Categorias -->
-    <nav class="sticky top-[76px] z-30 bg-white shadow-md">
-        <div class="flex overflow-x-auto scrollbar-hide py-3 px-4 gap-3" id="category-nav">
-            <button data-category="pizzas-salgadas" class="category-btn active flex-shrink-0 px-4 py-2 rounded-full bg-primary text-white font-semibold text-sm whitespace-nowrap transition-all">
-                <i class="fas fa-pizza-slice mr-2"></i>Pizzas Salgadas
-            </button>
-            <button data-category="pizzas-doces" class="category-btn flex-shrink-0 px-4 py-2 rounded-full bg-gray-200 text-gray-700 font-semibold text-sm whitespace-nowrap transition-all">
-                <i class="fas fa-cookie mr-2"></i>Pizzas Doces
-            </button>
-            <button data-category="bebidas" class="category-btn flex-shrink-0 px-4 py-2 rounded-full bg-gray-200 text-gray-700 font-semibold text-sm whitespace-nowrap transition-all">
-                <i class="fas fa-glass-water mr-2"></i>Bebidas
-            </button>
-            <button data-category="sucos" class="category-btn flex-shrink-0 px-4 py-2 rounded-full bg-gray-200 text-gray-700 font-semibold text-sm whitespace-nowrap transition-all">
-                <i class="fas fa-blender mr-2"></i>Sucos
-            </button>
-            <button data-category="cervejas" class="category-btn flex-shrink-0 px-4 py-2 rounded-full bg-gray-200 text-gray-700 font-semibold text-sm whitespace-nowrap transition-all">
-                <i class="fas fa-beer-mug-empty mr-2"></i>Cervejas
-            </button>
-        </div>
-    </nav>
-
-    <!-- Container Principal -->
-    <main class="container mx-auto px-4 py-6">
-        <!-- Seção Pizzas Salgadas -->
-        <section id="pizzas-salgadas" class="menu-section">
-            <h2 class="text-2xl font-bold text-gray-800 mb-4 flex items-center">
-                <i class="fas fa-pizza-slice text-primary mr-3"></i>Pizzas Salgadas
+    <!-- Container Principal - Layout Único Sem Abas -->
+    <main class="px-3 py-4 space-y-6">
+        
+        <!-- Seção Resultados de Busca (aparece quando busca) -->
+        <section id="search-results" class="hidden">
+            <h2 class="text-xl font-bold text-gray-800 mb-3 flex items-center px-1">
+                <i class="fas fa-search text-primary mr-2"></i>Resultados da Busca
             </h2>
-            <div id="pizzas-salgadas-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"></div>
-        </section>
-
-        <!-- Seção Pizzas Doces -->
-        <section id="pizzas-doces" class="menu-section hidden">
-            <h2 class="text-2xl font-bold text-gray-800 mb-4 flex items-center">
-                <i class="fas fa-cookie text-primary mr-3"></i>Pizzas Doces
-            </h2>
-            <div id="pizzas-doces-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"></div>
-        </section>
-
-        <!-- Seção Bebidas -->
-        <section id="bebidas" class="menu-section hidden">
-            <h2 class="text-2xl font-bold text-gray-800 mb-4 flex items-center">
-                <i class="fas fa-glass-water text-primary mr-3"></i>Bebidas
-            </h2>
-            <div id="bebidas-grid" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"></div>
-        </section>
-
-        <!-- Seção Sucos -->
-        <section id="sucos" class="menu-section hidden">
-            <h2 class="text-2xl font-bold text-gray-800 mb-4 flex items-center">
-                <i class="fas fa-blender text-primary mr-3"></i>Sucos Naturais
-            </h2>
-            <div id="sucos-grid" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"></div>
-        </section>
-
-        <!-- Seção Cervejas -->
-        <section id="cervejas" class="menu-section hidden">
-            <h2 class="text-2xl font-bold text-gray-800 mb-4 flex items-center">
-                <i class="fas fa-beer-mug-empty text-primary mr-3"></i>Cervejas
-            </h2>
-            <div id="cervejas-grid" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"></div>
-        </section>
-
-        <!-- Seção Resultados de Busca -->
-        <section id="search-results" class="menu-section hidden">
-            <h2 class="text-2xl font-bold text-gray-800 mb-4 flex items-center">
-                <i class="fas fa-search text-primary mr-3"></i>Resultados da Busca
-            </h2>
-            <div id="search-results-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"></div>
-            <div id="no-results" class="hidden text-center py-12 text-gray-400">
-                <i class="fas fa-search text-5xl mb-4"></i>
-                <p class="text-lg">Nenhum item encontrado</p>
+            <div id="search-results-grid" class="grid grid-cols-1 gap-3"></div>
+            <div id="no-results" class="hidden text-center py-8 text-gray-400">
+                <i class="fas fa-search text-4xl mb-3"></i>
+                <p>Nenhum item encontrado</p>
             </div>
         </section>
+
+        <!-- Container de todas as seções do cardápio -->
+        <div id="all-sections">
+            
+            <!-- ========== PIZZAS SALGADAS ========== -->
+            <section id="pizzas-salgadas" class="mb-8">
+                <div class="bg-primary text-white rounded-xl p-4 mb-4 shadow-lg">
+                    <h2 class="text-xl font-bold flex items-center">
+                        <i class="fas fa-pizza-slice mr-3 text-2xl"></i>
+                        PIZZAS SALGADAS
+                    </h2>
+                    <p class="text-sm opacity-90 mt-1">Escolha seu sabor favorito</p>
+                </div>
+                <div id="pizzas-salgadas-grid" class="grid grid-cols-3 gap-2"></div>
+            </section>
+
+            <!-- ========== PIZZAS DOCES ========== -->
+            <section id="pizzas-doces" class="mb-8">
+                <div class="bg-gradient-to-r from-pink-500 to-purple-500 text-white rounded-xl p-4 mb-4 shadow-lg">
+                    <h2 class="text-xl font-bold flex items-center">
+                        <i class="fas fa-cookie mr-3 text-2xl"></i>
+                        PIZZAS DOCES
+                    </h2>
+                    <p class="text-sm opacity-90 mt-1">Sobremesas deliciosas</p>
+                </div>
+                <div id="pizzas-doces-grid" class="grid grid-cols-3 gap-2"></div>
+            </section>
+
+            <!-- ========== BEBIDAS ========== -->
+            <section id="bebidas" class="mb-8">
+                <div class="bg-gradient-to-r from-blue-500 to-cyan-500 text-white rounded-xl p-4 mb-4 shadow-lg">
+                    <h2 class="text-xl font-bold flex items-center">
+                        <i class="fas fa-glass-water mr-3 text-2xl"></i>
+                        BEBIDAS
+                    </h2>
+                    <p class="text-sm opacity-90 mt-1">Refrigerantes e águas</p>
+                </div>
+                <div id="bebidas-grid" class="grid grid-cols-2 gap-3"></div>
+            </section>
+
+            <!-- ========== SUCOS ========== -->
+            <section id="sucos" class="mb-8">
+                <div class="bg-gradient-to-r from-green-500 to-emerald-500 text-white rounded-xl p-4 mb-4 shadow-lg">
+                    <h2 class="text-xl font-bold flex items-center">
+                        <i class="fas fa-blender mr-3 text-2xl"></i>
+                        SUCOS NATURAIS
+                    </h2>
+                    <p class="text-sm opacity-90 mt-1">Frescos e saudáveis</p>
+                </div>
+                <div id="sucos-grid" class="grid grid-cols-2 gap-3"></div>
+            </section>
+
+            <!-- ========== CERVEJAS ========== -->
+            <section id="cervejas" class="mb-8">
+                <div class="bg-gradient-to-r from-amber-500 to-yellow-500 text-white rounded-xl p-4 mb-4 shadow-lg">
+                    <h2 class="text-xl font-bold flex items-center">
+                        <i class="fas fa-beer-mug-empty mr-3 text-2xl"></i>
+                        CERVEJAS
+                    </h2>
+                    <p class="text-sm opacity-90 mt-1">Long Necks geladas</p>
+                </div>
+                <div id="cervejas-grid" class="grid grid-cols-2 gap-3"></div>
+            </section>
+
+        </div>
     </main>
 
     <!-- Botão Carrinho Flutuante -->

@@ -130,23 +130,23 @@ const BEBIDAS = [
     // Refrigerantes 1.5L
     { id: 201, name: 'Coca-Cola 1,5L', price: 14.00, image: 'media/drinks_nobg/Coca-cola.png', category: 'refrigerante' },
     { id: 202, name: 'Coca-Cola Zero 1,5L', price: 14.00, image: 'media/drinks_nobg/Coca-zero.png', category: 'refrigerante' },
-    { id: 203, name: 'Guaraná Antarctica 1,5L', price: 13.00, image: 'media/drinks_nobg/Guarana-lata.png', category: 'refrigerante' },
-    { id: 204, name: 'Guaraná Zero 1,5L', price: 13.00, image: 'media/drinks_nobg/guarana-lata-zero.png', category: 'refrigerante' },
+    { id: 203, name: 'Guaraná Antarctica 1,5L', price: 13.00, image: 'media/drinks_nobg/guarana-litro-removebg-preview.png', category: 'refrigerante' },
+    { id: 204, name: 'Guaraná Zero 1,5L', price: 13.00, image: 'media/drinks_nobg/guarana-zero-litro-removebg-preview.png', category: 'refrigerante' },
     { id: 205, name: 'Sprite 1,5L', price: 13.00, image: 'media/drinks_nobg/Sprite.png', category: 'refrigerante' },
     { id: 206, name: 'Fanta 1,5L', price: 13.00, image: 'media/drinks_nobg/Fanta.png', category: 'refrigerante' },
-    { id: 207, name: 'Água Mineral 1,5L', price: 10.00, image: 'media/drinks_nobg/agua-mineral-497.png', category: 'agua' },
+    { id: 207, name: 'Água Mineral Puríssima 1,5L', price: 10.00, image: 'media/drinks_nobg/purissima-1.5l-removebg-preview.png', category: 'agua' },
     // Refrigerantes Lata
-    { id: 208, name: 'Coca-Cola Lata 350ml', price: 8.90, image: 'media/drinks_nobg/Coca-lata.png', category: 'refrigerante' },
-    { id: 209, name: 'Coca Zero Lata 350ml', price: 8.90, image: 'media/drinks_nobg/coca-lata-zero.png', category: 'refrigerante' },
+    { id: 208, name: 'Coca-Cola Lata 310ml', price: 8.90, image: 'media/drinks_nobg/coca-cola-310ml-1-removebg-preview.png', category: 'refrigerante' },
+    { id: 209, name: 'Coca Zero Lata 310ml', price: 8.90, image: 'media/drinks_nobg/coca-zero-310ml.png', category: 'refrigerante' },
     { id: 210, name: 'Guaraná Lata 350ml', price: 8.90, image: 'media/drinks_nobg/Guarana-lata.png', category: 'refrigerante' },
     { id: 211, name: 'Guaraná Zero Lata 350ml', price: 8.90, image: 'media/drinks_nobg/guarana-lata-zero.png', category: 'refrigerante' },
-    { id: 212, name: 'Schweppes Citrus 350ml', price: 8.90, image: 'media/drinks_nobg/Schweppes-lata.png', category: 'refrigerante' },
-    { id: 213, name: 'Schweppes Tônica 350ml', price: 8.90, image: 'media/drinks_nobg/Schweppes-lata.png', category: 'refrigerante' },
+    { id: 212, name: 'Schweppes Citrus 310ml', price: 8.90, image: 'media/drinks_nobg/schweppes-310ml-removebg-preview.png', category: 'refrigerante' },
+    { id: 213, name: 'Schweppes Tônica 310ml', price: 8.90, image: 'media/drinks_nobg/schweppes-tonica-310ml-removebg-preview.png', category: 'refrigerante' },
     { id: 214, name: 'Sprite Lata 350ml', price: 8.90, image: 'media/drinks_nobg/sprite-lata.png', category: 'refrigerante' },
     { id: 215, name: 'Fanta Lata 350ml', price: 8.90, image: 'media/drinks_nobg/Fanta-lata.png', category: 'refrigerante' },
     // Águas
-    { id: 216, name: 'Água Mineral 497ml', price: 6.00, image: 'media/drinks_nobg/agua-mineral-497.png', category: 'agua' },
-    { id: 217, name: 'Água com Gás 497ml', price: 7.90, image: 'media/drinks_nobg/agua-com-gas-497.png', category: 'agua' },
+    { id: 216, name: 'Água Mineral Puríssima 497ml', price: 6.00, image: 'media/drinks_nobg/purissima-497ml-removebg-preview.png', category: 'agua' },
+    { id: 217, name: 'Água com Gás Puríssima 497ml', price: 7.90, image: 'media/drinks_nobg/purissima-497ml-comgas-removebg-preview.png', category: 'agua' },
     { id: 218, name: 'Aquárius Lemon 510ml', price: 8.00, image: 'media/drinks_nobg/Aquarius-lemon.png', category: 'agua' }
 ];
 
@@ -169,18 +169,18 @@ const CERVEJAS = [
 // ============================================
 const SUCOS = [
     // Sucos Naturais 1L
-    { id: 401, name: 'Suco de Laranja 1L', description: 'Suco natural de laranja', price: 24.90, image: null, category: 'natural' },
+    { id: 401, name: 'Suco de Laranja 1L', description: 'Suco natural de laranja', price: 29.90, image: null, category: 'natural' },
     { id: 402, name: 'Suco Laranja com Acerola 1L', description: 'Suco natural de laranja com acerola', price: 29.90, image: null, category: 'natural' },
-    { id: 403, name: 'Suco de Abacaxi 1L', description: 'Suco natural de abacaxi', price: 24.90, image: null, category: 'natural' },
-    { id: 404, name: 'Suco de Limão 1L', description: 'Suco natural de limão', price: 24.90, image: null, category: 'natural' },
-    { id: 405, name: 'Suco de Maracujá 1L', description: 'Suco natural de maracujá', price: 24.90, image: null, category: 'natural' },
+    { id: 403, name: 'Suco de Abacaxi 1L', description: 'Suco natural de abacaxi', price: 29.90, image: null, category: 'natural' },
+    { id: 404, name: 'Suco de Limão 1L', description: 'Suco natural de limão', price: 29.90, image: null, category: 'natural' },
+    { id: 405, name: 'Suco de Maracujá 1L', description: 'Suco natural de maracujá', price: 29.90, image: null, category: 'natural' },
     { id: 406, name: 'Suco Verde 1L', description: 'Laranja, couve, hortelã, manjericão e gengibre', price: 29.90, image: null, category: 'natural' },
     { id: 407, name: 'Suco Vermelho 1L', description: 'Laranja, cenoura e beterraba', price: 29.90, image: null, category: 'natural' },
     { id: 408, name: 'Suco Abacaxi com Hortelã 1L', description: 'Suco natural de abacaxi com hortelã', price: 29.90, image: null, category: 'natural' },
     // Sucos de Polpa 1L
-    { id: 409, name: 'Suco de Acerola 1L', description: 'Suco de polpa de acerola', price: 24.90, image: null, category: 'polpa' },
-    { id: 410, name: 'Suco de Morango 1L', description: 'Suco de polpa de morango', price: 24.90, image: null, category: 'polpa' },
-    { id: 411, name: 'Suco de Uva 1L', description: 'Suco de polpa de uva', price: 24.90, image: null, category: 'polpa' }
+    { id: 409, name: 'Suco de Acerola 1L', description: 'Suco de polpa de acerola', price: 29.90, image: null, category: 'polpa' },
+    { id: 410, name: 'Suco de Morango 1L', description: 'Suco de polpa de morango', price: 29.90, image: null, category: 'polpa' },
+    { id: 411, name: 'Suco de Uva 1L', description: 'Suco de polpa de uva', price: 29.90, image: null, category: 'polpa' }
 ];
 
 // ============================================
@@ -1038,7 +1038,9 @@ const App = {
      */
     checkout() {
         const name = document.getElementById('customer-name').value.trim();
-        const address = document.getElementById('customer-address').value.trim();
+        const cpf = document.getElementById('customer-cpf').value.trim();
+        const cep = document.getElementById('customer-cep').value.trim();
+        const complemento = document.getElementById('customer-complemento').value.trim();
 
         if (AppState.cart.length === 0) {
             Utils.showToast('Carrinho vazio!');
@@ -1046,12 +1048,19 @@ const App = {
         }
 
         // Monta mensagem
-        let message = `⏳ *AGUARDE! Um atendente já vai atender você para finalizar o pedido e pegar o restante dos dados.*\n\n`;
-        message += `━━━━━━━━━━━━━━━━━━━━\n`;
-        message += `🍕 *NOVO PEDIDO - PIZZARIA HIT*\n\n`;
-        if (name) message += `👤 *Cliente:* ${name}\n`;
-        if (address) message += `📍 *Endereço:* ${address}\n`;
-        if (name || address) message += `\n`;
+        let message = `🍕 *NOVO PEDIDO - PIZZARIA HIT*\n\n`;
+        
+        // Dados do cliente (se preenchidos)
+        const hasCustomerData = name || cpf || cep || complemento;
+        if (hasCustomerData) {
+            message += `� *DADOS DO CLIENTE:*\n`;
+            if (name) message += `👤 Nome: ${name}\n`;
+            if (cpf) message += `🪪 CPF: ${cpf}\n`;
+            if (cep) message += `📍 CEP: ${cep}\n`;
+            if (complemento) message += `🏠 Complemento: ${complemento}\n`;
+            message += `\n`;
+        }
+        
         message += `━━━━━━━━━━━━━━━━━━━━\n`;
         message += `📋 *ITENS DO PEDIDO:*\n\n`;
 
@@ -1064,7 +1073,11 @@ const App = {
         const total = AppState.cart.reduce((sum, item) => sum + item.price, 0);
         message += `━━━━━━━━━━━━━━━━━━━━\n`;
         message += `💵 *TOTAL: ${Utils.formatCurrency(total)}*\n\n`;
-        message += `Obrigado pela preferência! 🎉`;
+        message += `━━━━━━━━━━━━━━━━━━━━\n`;
+        message += `⏳ *AGUARDE A CONFIRMAÇÃO*\n\n`;
+        message += `Agradecemos pelo seu pedido! Um de nossos atendentes entrará em contato em instantes para confirmar os detalhes, informar o valor da taxa de entrega e o tempo estimado para chegada do seu pedido.\n\n`;
+        message += `📱 Fique com o celular por perto!\n\n`;
+        message += `🍕 *Pizzaria Hit*`;
 
         // Codifica e abre WhatsApp
         const encodedMessage = encodeURIComponent(message);
@@ -1085,7 +1098,9 @@ const App = {
         Render.updateCartCount();
         this.closeCart();
         document.getElementById('customer-name').value = '';
-        document.getElementById('customer-address').value = '';
+        document.getElementById('customer-cpf').value = '';
+        document.getElementById('customer-cep').value = '';
+        document.getElementById('customer-complemento').value = '';
     }
 };
 

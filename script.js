@@ -221,10 +221,12 @@ const Render = {
         const imageHTML = hasImage
             ? `<div class="pizza-card-image"><img src="${p.image}" alt="${p.name}" loading="lazy" onerror="this.src='${ph}'"></div>`
             : `<div class="pizza-card-image no-image"><span class="pizza-placeholder-icon">${isDoce ? '🍫' : '🍕'}</span></div>`;
+        const descHTML = p.description ? `<div class="pizza-card-desc">${p.description}</div>` : '';
         return `<div class="pizza-card" onclick="App.openPizzaModal(${p.id},'${isDoce?'doce':'salgada'}')">
             ${imageHTML}
             <div class="pizza-card-body">
                 <div class="pizza-card-name">${p.name}</div>
+                ${descHTML}
                 <div class="pizza-card-price"><span>a partir de </span>${Utils.formatCurrency(min)}</div>
             </div>
         </div>`;
@@ -677,7 +679,10 @@ const App = {
             msg += `\n`;
         }
 
-        msg += `Data: ${dateStr}\n`;
+        msg += `Data: ${dateStr}\n\n`;
+        msg += `${line}\n`;
+        msg += `*Aguarde um atendente confirmar o seu pedido e informar o valor da taxa de entrega.*\n`;
+        msg += `Obrigado por escolher a Pizzaria Hit!\n`;
 
         const url = `https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(msg)}`;
         window.open(url, '_blank');

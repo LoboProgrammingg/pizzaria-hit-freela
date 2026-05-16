@@ -100,6 +100,7 @@ const PIZZAS_SALGADAS = [
 
 // ── DADOS: PIZZAS DOCES ──
 const PIZZAS_DOCES = [
+    { id: 110, name: 'Brownie', description: 'Brownie da Brown\'s - escolha Ninho ou Chocolate', price: 18.00, image: 'media/flavors/sweet_flavors/ifood_ready/brownie-hit-black.png', options: ['Ninho', 'Chocolate'] },
     { id: 101, name: 'California', description: 'Creme de leite, mussarela, lombo, figo, pêssego, ameixa e orégano', prices: [51.90, 73.90, 84.90, 98.90], image: null },
     { id: 102, name: 'Salada de Fruta', description: 'Creme de leite, mussarela, pêssego, figo, ameixa, cereja e orégano', prices: [51.90, 73.90, 84.90, 98.90], image: null },
     { id: 103, name: 'Romeu e Julieta', description: 'Creme de leite, mussarela, banana, doce de goiaba e canela', prices: [51.90, 73.90, 84.90, 98.90], image: null },
@@ -170,7 +171,8 @@ const AppState = {
     selectedMassa: 'tradicional',
     selectedBorda: null,
     currentDrink: null,
-    drinkQty: 1
+    drinkQty: 1,
+    selectedDessertOption: null
 };
 
 // ── UTILS ──
@@ -215,20 +217,26 @@ const Render = {
     },
 
     pizzaCard(p) {
-        const min = Math.min(...p.prices);
         const isDoce = p.id >= 100;
         const ph = isDoce ? CONFIG.placeholders.pizzaDoce : CONFIG.placeholders.pizza;
         const hasImage = !!p.image;
+        const isFixedPrice = typeof p.price === 'number';
+        const priceHTML = isFixedPrice
+            ? Utils.formatCurrency(p.price)
+            : `<span>a partir de </span>${Utils.formatCurrency(Math.min(...p.prices))}`;
+        const action = isFixedPrice
+            ? `App.openDessertModal(${p.id})`
+            : `App.openPizzaModal(${p.id},'${isDoce?'doce':'salgada'}')`;
         const imageHTML = hasImage
             ? `<div class="pizza-card-image"><img src="${p.image}" alt="${p.name}" loading="lazy" onerror="this.src='${ph}'"></div>`
             : `<div class="pizza-card-image no-image"><span class="pizza-placeholder-icon">${isDoce ? '🍫' : '🍕'}</span></div>`;
         const descHTML = p.description ? `<div class="pizza-card-desc">${p.description}</div>` : '';
-        return `<div class="pizza-card" onclick="App.openPizzaModal(${p.id},'${isDoce?'doce':'salgada'}')">
+        return `<div class="pizza-card" onclick="${action}">
             ${imageHTML}
             <div class="pizza-card-body">
                 <div class="pizza-card-name">${p.name}</div>
                 ${descHTML}
-                <div class="pizza-card-price"><span>a partir de </span>${Utils.formatCurrency(min)}</div>
+                <div class="pizza-card-price">${priceHTML}</div>
             </div>
         </div>`;
     },
@@ -272,7 +280,7 @@ const Render = {
 
     renderFlavors() {
         const c = document.getElementById('flavor-options');
-        const all = AppState.currentPizza.id >= 100 ? PIZZAS_DOCES : PIZZAS_SALGADAS;
+        const all = AppState.currentPizza.id >= 100 ? PIZZAS_DOCES.filter(p => Array.isArray(p.prices)) : PIZZAS_SALGADAS;
         const si = AppState.selectedSize.index;
         c.innerHTML = all.map(p => {
             const sel = AppState.selectedFlavors.some(f => f.id === p.id);
@@ -515,7 +523,7 @@ const App = {
     },
 
     toggleFlavor(id) {
-        const list = AppState.currentPizza.id >= 100 ? PIZZAS_DOCES : PIZZAS_SALGADAS;
+        const list = AppState.currentPizza.id >= 100 ? PIZZAS_DOCES.filter(p => Array.isArray(p.prices)) : PIZZAS_SALGADAS;
         const pizza = list.find(p => p.id === id);
         const max = AppState.selectedSize.sabores;
         const idx = AppState.selectedFlavors.findIndex(f => f.id === id);
@@ -595,30 +603,75 @@ const App = {
         Utils.showToast('Pizza adicionada ao pedido!');
     },
 
+    openDessertModal(id) {
+        const dessert = PIZZAS_DOCES.find(p => p.id === id);
+        AppState.currentDrink = dessert;
+        AppState.drinkQty = 1;
+        AppState.selectedDessertOption = dessert.options?.[0] || null;
+        const ph = CONFIG.placeholders.pizzaDoce;
+        document.getElementById('drink-modal-title').textContent = 'Adicionar Sobremesa';
+        document.getElementById('drink-modal-image').src = dessert.image || ph;
+        document.getElementById('drink-modal-name').textContent = dessert.name;
+        document.getElementById('drink-modal-price').textContent = Utils.formatCurrency(dessert.price);
+        document.getElementById('drink-qty').textContent = '1';
+        this.renderDessertOptions(dessert);
+        this.openModal('drink');
+    },
+
+    renderDessertOptions(dessert) {
+        const wrap = document.getElementById('dessert-options-wrap');
+        const list = document.getElementById('dessert-options');
+        if (!dessert.options?.length) {
+            wrap.classList.add('hidden');
+            list.innerHTML = '';
+            return;
+        }
+        wrap.classList.remove('hidden');
+        list.innerHTML = dessert.options.map(option => `
+            <button class="dessert-option ${AppState.selectedDessertOption === option ? 'selected' : ''}" onclick="App.selectDessertOption('${option}')">
+                ${option}
+            </button>
+        `).join('');
+    },
+
+    selectDessertOption(option) {
+        AppState.selectedDessertOption = option;
+        this.renderDessertOptions(AppState.currentDrink);
+    },
+
     // ─ Drink Modal ─
     openDrinkModal(id, type) {
         const lists = { bebida: BEBIDAS, suco: SUCOS, cerveja: CERVEJAS };
         const list = lists[type] || BEBIDAS;
         AppState.currentDrink = list.find(d => d.id === id);
         AppState.drinkQty = 1;
+        AppState.selectedDessertOption = null;
         const d = AppState.currentDrink;
         const ph = CONFIG.placeholders[type] || CONFIG.placeholders.bebida;
+        document.getElementById('drink-modal-title').textContent = 'Adicionar Bebida';
         document.getElementById('drink-modal-image').src = d.image || ph;
         document.getElementById('drink-modal-name').textContent = d.name;
         document.getElementById('drink-modal-price').textContent = Utils.formatCurrency(d.price);
         document.getElementById('drink-qty').textContent = '1';
+        document.getElementById('dessert-options-wrap').classList.add('hidden');
+        document.getElementById('dessert-options').innerHTML = '';
         this.openModal('drink');
     },
 
     addDrinkToCart() {
         const d = AppState.currentDrink;
+        const isDessert = Array.isArray(d.options);
+        if (isDessert && !AppState.selectedDessertOption) {
+            Utils.showToast('Selecione o sabor');
+            return;
+        }
         for (let i = 0; i < AppState.drinkQty; i++) {
             AppState.cart.push({
                 id: Utils.generateId(),
-                name: d.name,
-                details: 'Qtd: 1',
+                name: isDessert ? `${d.name} - ${AppState.selectedDessertOption}` : d.name,
+                details: isDessert ? `Sabor: ${AppState.selectedDessertOption} | Qtd: 1` : 'Qtd: 1',
                 price: d.price,
-                type: 'bebida'
+                type: isDessert ? 'sobremesa' : 'bebida'
             });
         }
         this.closeModal('drink');

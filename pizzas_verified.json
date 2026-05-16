@@ -287,6 +287,12 @@
     ],
     "doces": [
       {
+        "nome": "BROWNIE",
+        "descricao": "Brownie da Brown's - escolha Ninho ou Chocolate",
+        "preco": 18.00,
+        "opcoes": ["Ninho", "Chocolate"]
+      },
+      {
         "nome": "CALIFORNIA",
         "descricao": "Creme de leite, mussarela, lombo, figo, pêssego, ameixa e orégano",
         "precos": { "broto": 51.90, "pequena": 73.90, "media": 84.90, "grande": 98.90 }

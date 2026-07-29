@@ -12,87 +12,87 @@
       {
         "nome": "MUSSARELA",
         "descricao": "Molho, mussarela, parmesão, azeitona e orégano",
-        "precos": { "broto": 51.90, "pequena": 73.90, "media": 84.90, "grande": 98.90 }
+        "precos": { "broto": 58.90, "pequena": 75.90, "media": 93.90, "grande": 105.90 }
       },
       {
         "nome": "PORTUGUESA",
         "descricao": "Molho, mussarela, presunto, tomate, ovos, cebola, pimentão, azeitona e orégano",
-        "precos": { "broto": 51.90, "pequena": 73.90, "media": 84.90, "grande": 98.90 }
+        "precos": { "broto": 58.90, "pequena": 75.90, "media": 93.90, "grande": 105.90 }
       },
       {
         "nome": "TRADICIONAL",
         "descricao": "Molho, mussarela, presunto, azeitona e orégano",
-        "precos": { "broto": 51.90, "pequena": 73.90, "media": 84.90, "grande": 98.90 }
+        "precos": { "broto": 58.90, "pequena": 75.90, "media": 93.90, "grande": 105.90 }
       },
       {
         "nome": "NAPOLITANA",
         "descricao": "Molho, mussarela, parmesão, tomate, azeitona e orégano",
-        "precos": { "broto": 51.90, "pequena": 73.90, "media": 84.90, "grande": 98.90 }
+        "precos": { "broto": 58.90, "pequena": 75.90, "media": 93.90, "grande": 105.90 }
       },
       {
         "nome": "CALABRESA",
         "descricao": "Molho, mussarela, calabresa, cebola, azeitona e orégano",
-        "precos": { "broto": 51.90, "pequena": 73.90, "media": 84.90, "grande": 98.90 }
+        "precos": { "broto": 58.90, "pequena": 75.90, "media": 93.90, "grande": 105.90 }
       },
       {
         "nome": "CALABRESA ESPECIAL",
         "descricao": "Molho, mussarela, calabresa moída pré-assada, catupiry, uma pitadinha de pimenta calabresa, cebola, azeitona e orégano",
-        "precos": { "broto": 51.90, "pequena": 73.90, "media": 84.90, "grande": 98.90 }
+        "precos": { "broto": 58.90, "pequena": 75.90, "media": 93.90, "grande": 105.90 }
       },
       {
         "nome": "TOSCANA",
         "descricao": "Molho, calabresa moída, mussarela, catupiry, azeitona e orégano",
-        "precos": { "broto": 51.90, "pequena": 73.90, "media": 84.90, "grande": 98.90 }
+        "precos": { "broto": 58.90, "pequena": 75.90, "media": 93.90, "grande": 105.90 }
       },
       {
         "nome": "DOM CAMILO",
         "descricao": "Molho, mussarela, presunto, calabresa, creme de leite, azeitona e orégano",
-        "precos": { "broto": 51.90, "pequena": 73.90, "media": 84.90, "grande": 98.90 }
+        "precos": { "broto": 58.90, "pequena": 75.90, "media": 93.90, "grande": 105.90 }
       },
       {
         "nome": "MEXICANA",
         "descricao": "Molho, mussarela, calabresa moída, pimenta calabresa, azeitona e orégano",
-        "precos": { "broto": 51.90, "pequena": 73.90, "media": 84.90, "grande": 98.90 }
+        "precos": { "broto": 58.90, "pequena": 75.90, "media": 93.90, "grande": 105.90 }
       },
       {
         "nome": "CATUPIRY",
         "descricao": "Molho, mussarela, catupiry, azeitona e orégano",
-        "precos": { "broto": 51.90, "pequena": 73.90, "media": 84.90, "grande": 98.90 }
+        "precos": { "broto": 58.90, "pequena": 75.90, "media": 93.90, "grande": 105.90 }
       },
       {
         "nome": "FRANGO COM CATUPIRY",
         "descricao": "Molho, mussarela, peito de frango, catupiry, azeitona e orégano",
-        "precos": { "broto": 51.90, "pequena": 73.90, "media": 84.90, "grande": 98.90 }
+        "precos": { "broto": 58.90, "pequena": 75.90, "media": 93.90, "grande": 105.90 }
       },
       {
         "nome": "FRANGO ESPECIAL",
         "descricao": "Molho, mussarela, peito de frango, cebola, tomate seco, manjericão, azeitona e orégano",
-        "precos": { "broto": 53.90, "pequena": 76.90, "media": 93.90, "grande": 102.90 }
+        "precos": { "broto": 64.90, "pequena": 87.90, "media": 102.90, "grande": 116.90 }
       },
       {
         "nome": "À BRASILEIRA",
         "descricao": "Molho, mussarela, peito de frango, milho verde, azeitona e orégano",
-        "precos": { "broto": 51.90, "pequena": 73.90, "media": 84.90, "grande": 98.90 }
+        "precos": { "broto": 58.90, "pequena": 75.90, "media": 93.90, "grande": 105.90 }
       },
       {
         "nome": "ATUM",
         "descricao": "Molho, mussarela, atum, tomate, cebola, azeitona e orégano",
-        "precos": { "broto": 53.90, "pequena": 76.90, "media": 93.90, "grande": 102.90 }
+        "precos": { "broto": 58.90, "pequena": 75.90, "media": 93.90, "grande": 105.90 }
       },
       {
         "nome": "PIZZA HIT",
         "descricao": "Molho, mussarela, catupiry, presunto, bacon, champignon, cebola, azeitona e orégano",
-        "precos": { "broto": 51.90, "pequena": 73.90, "media": 84.90, "grande": 98.90 }
+        "precos": { "broto": 58.90, "pequena": 75.90, "media": 93.90, "grande": 105.90 }
       },
       {
         "nome": "MARGUERITA",
         "descricao": "Molho, mussarela, manjericão fresco, tomate, parmesão, azeitona e orégano",
-        "precos": { "broto": 51.90, "pequena": 73.90, "media": 84.90, "grande": 98.90 }
+        "precos": { "broto": 58.90, "pequena": 75.90, "media": 93.90, "grande": 105.90 }
       },
       {
         "nome": "MARGUERITA ESPECIAL",
         "descricao": "Molho, mussarela, manjericão fresco, tomate, alho gratinado, tomate seco, parmesão, azeitona e orégano",
-        "precos": { "broto": 51.90, "pequena": 73.90, "media": 84.90, "grande": 98.90 }
+        "precos": { "broto": 58.90, "pequena": 75.90, "media": 93.90, "grande": 105.90 }
       },
       {
         "nome": "ALICHE",
@@ -102,37 +102,37 @@
       {
         "nome": "BACON",
         "descricao": "Molho, mussarela, bacon, ovos, azeitona e orégano",
-        "precos": { "broto": 51.90, "pequena": 73.90, "media": 84.90, "grande": 98.90 }
+        "precos": { "broto": 58.90, "pequena": 75.90, "media": 93.90, "grande": 105.90 }
       },
       {
         "nome": "ALHO E ÓLEO",
         "descricao": "Molho, mussarela, parmesão, alho gratinado no azeite, azeitona e orégano",
-        "precos": { "broto": 51.90, "pequena": 73.90, "media": 84.90, "grande": 98.90 }
+        "precos": { "broto": 58.90, "pequena": 75.90, "media": 93.90, "grande": 105.90 }
       },
       {
         "nome": "LOMBO AO CREME",
         "descricao": "Molho, mussarela, lombinho canadense, requeijão cremoso, tomate, azeitona e orégano",
-        "precos": { "broto": 51.90, "pequena": 73.90, "media": 84.90, "grande": 98.90 }
+        "precos": { "broto": 58.90, "pequena": 75.90, "media": 93.90, "grande": 105.90 }
       },
       {
         "nome": "GENOVESA",
         "descricao": "Molho, mussarela, presunto, creme de leite, azeitona e orégano",
-        "precos": { "broto": 51.90, "pequena": 73.90, "media": 84.90, "grande": 98.90 }
+        "precos": { "broto": 58.90, "pequena": 75.90, "media": 93.90, "grande": 105.90 }
       },
       {
         "nome": "PALMITO",
         "descricao": "Molho, mussarela, palmito, tomate, azeitona e orégano",
-        "precos": { "broto": 51.90, "pequena": 73.90, "media": 84.90, "grande": 98.90 }
+        "precos": { "broto": 58.90, "pequena": 75.90, "media": 93.90, "grande": 105.90 }
       },
       {
         "nome": "QUATRO QUEIJOS",
         "descricao": "Molho, mussarela, catupiry, gorgonzola, provolone, parmesão, azeitona e orégano",
-        "precos": { "broto": 51.90, "pequena": 73.90, "media": 84.90, "grande": 98.90 }
+        "precos": { "broto": 58.90, "pequena": 75.90, "media": 93.90, "grande": 105.90 }
       },
       {
         "nome": "SUPER HIT",
         "descricao": "Molho, mussarela, catupiry, presunto, calabresa, bacon, champignon, requeijão, cebola, azeitona e orégano",
-        "precos": { "broto": 53.90, "pequena": 76.90, "media": 93.90, "grande": 102.90 }
+        "precos": { "broto": 64.90, "pequena": 87.90, "media": 102.90, "grande": 116.90 }
       },
       {
         "nome": "CAPRESE",
@@ -152,7 +152,7 @@
       {
         "nome": "MODA ARACÍ",
         "descricao": "Molho, mussarela, ricota, provolone, presunto, ovos, bacon e orégano",
-        "precos": { "broto": 51.90, "pequena": 73.90, "media": 84.90, "grande": 98.90 }
+        "precos": { "broto": 58.90, "pequena": 75.90, "media": 93.90, "grande": 105.90 }
       },
       {
         "nome": "VEGETARIANA",
@@ -162,12 +162,12 @@
       {
         "nome": "ESCAROLA",
         "descricao": "Molho, mussarela, escarola, catupiry, bacon, azeitona e orégano",
-        "precos": { "broto": 51.90, "pequena": 73.90, "media": 84.90, "grande": 98.90 }
+        "precos": { "broto": 58.90, "pequena": 75.90, "media": 93.90, "grande": 105.90 }
       },
       {
         "nome": "BRÓCOLIS",
         "descricao": "Molho, mussarela, brócolis, bacon, alho gratinado, catupiry, azeitona e orégano",
-        "precos": { "broto": 51.90, "pequena": 73.90, "media": 84.90, "grande": 98.90 }
+        "precos": { "broto": 58.90, "pequena": 75.90, "media": 93.90, "grande": 105.90 }
       },
       {
         "nome": "BRÓCOLIS COM BERINJELA",
@@ -187,42 +187,42 @@
       {
         "nome": "MILHO",
         "descricao": "Molho, mussarela, milho, azeitona e orégano",
-        "precos": { "broto": 51.90, "pequena": 73.90, "media": 84.90, "grande": 98.90 }
+        "precos": { "broto": 58.90, "pequena": 75.90, "media": 93.90, "grande": 105.90 }
       },
       {
         "nome": "MILHO COM CATUPIRY",
         "descricao": "Molho, mussarela, catupiry, milho, azeitona e orégano",
-        "precos": { "broto": 51.90, "pequena": 73.90, "media": 84.90, "grande": 98.90 }
+        "precos": { "broto": 58.90, "pequena": 75.90, "media": 93.90, "grande": 105.90 }
       },
       {
         "nome": "SUPER PORTUGUESA",
         "descricao": "Molho, mussarela, presunto, calabresa, tomate, ovos, cebola, azeitona, pimentão e orégano",
-        "precos": { "broto": 53.90, "pequena": 76.90, "media": 93.90, "grande": 102.90 }
+        "precos": { "broto": 64.90, "pequena": 87.90, "media": 102.90, "grande": 116.90 }
       },
       {
         "nome": "SUPER QUATRO QUEIJOS",
         "descricao": "Molho, mussarela, catupiry, gorgonzola, provolone, tomate seco, azeitona, parmesão e orégano",
-        "precos": { "broto": 53.90, "pequena": 76.90, "media": 93.90, "grande": 102.90 }
+        "precos": { "broto": 64.90, "pequena": 87.90, "media": 102.90, "grande": 116.90 }
       },
       {
         "nome": "STROGONOFF DE FRANGO",
         "descricao": "Molho, mussarela, peito de frango, creme de leite, palmito, azeitona, orégano e batata palha",
-        "precos": { "broto": 53.90, "pequena": 76.90, "media": 93.90, "grande": 102.90 }
+        "precos": { "broto": 64.90, "pequena": 87.90, "media": 102.90, "grande": 116.90 }
       },
       {
         "nome": "STROGONOFF DE FILÉ",
         "descricao": "Molho, mussarela, filé, creme de leite, champignon, batata palha, azeitona e orégano",
-        "precos": { "broto": 53.90, "pequena": 76.90, "media": 93.90, "grande": 102.90 }
+        "precos": { "broto": 64.90, "pequena": 87.90, "media": 102.90, "grande": 116.90 }
       },
       {
         "nome": "FILÉ ESPECIAL",
         "descricao": "Molho, mussarela, filé, tomate cereja, azeitona e orégano",
-        "precos": { "broto": 53.90, "pequena": 76.90, "media": 93.90, "grande": 102.90 }
+        "precos": { "broto": 64.90, "pequena": 87.90, "media": 102.90, "grande": 116.90 }
       },
       {
         "nome": "PANTANEIRA",
         "descricao": "Molho, mussarela, carne seca, catupiry, creme de leite, banana da terra frita, azeitona e orégano",
-        "precos": { "broto": 53.90, "pequena": 76.90, "media": 93.90, "grande": 102.90 }
+        "precos": { "broto": 64.90, "pequena": 87.90, "media": 102.90, "grande": 116.90 }
       },
       {
         "nome": "SUIÇA",
@@ -232,12 +232,12 @@
       {
         "nome": "CAMARÃO",
         "descricao": "Molho, mussarela, camarão, creme de leite, parmesão, batata palha, azeitona e orégano",
-        "precos": { "broto": 71.90, "pequena": 81.90, "media": 112.90, "grande": 119.90 }
+        "precos": { "broto": 65.90, "pequena": 89.90, "media": 104.90, "grande": 119.20 }
       },
       {
         "nome": "BACALHAU",
         "descricao": "Molho, mussarela, bacalhau refogado no azeite, tomate, pimentão, cebola, ovos, azeitona e orégano",
-        "precos": { "broto": 71.90, "pequena": 81.90, "media": 112.90, "grande": 119.90 }
+        "precos": { "broto": 65.90, "pequena": 89.90, "media": 104.90, "grande": 119.20 }
       },
       {
         "nome": "MUSSARELA DE BÚFALA",
@@ -277,12 +277,12 @@
       {
         "nome": "PRESUNTO DE PARMA",
         "descricao": "Molho de tomate, mussarela de Búfala, tomate cereja, presunto de Parma, azeitona preta e orégano",
-        "precos": { "broto": 71.90, "pequena": 81.90, "media": 112.90, "grande": 119.90 }
+        "precos": { "broto": 64.90, "pequena": 87.90, "media": 102.90, "grande": 116.90 }
       },
       {
         "nome": "VEGETARIANA HIT",
         "descricao": "Molho de tomate, mussarela de Búfala, tomate cereja, palmito, brócolis, abobrinha, azeitona e orégano",
-        "precos": { "broto": 71.90, "pequena": 81.90, "media": 112.90, "grande": 119.90 }
+        "precos": { "broto": 65.90, "pequena": 89.90, "media": 104.90, "grande": 119.20 }
       }
     ],
     "doces": [

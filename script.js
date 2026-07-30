@@ -114,13 +114,13 @@ const PIZZAS_DOCES = [
 
 // ── DADOS: BEBIDAS ──
 const BEBIDAS = [
-    { id: 201, name: 'Coca-Cola 1,5L', price: 14.00, image: 'media/drinks_nobg/Coca-cola.png', category: 'refrigerante' },
-    { id: 202, name: 'Coca-Cola Zero 1,5L', price: 14.00, image: 'media/drinks_nobg/Coca-zero.png', category: 'refrigerante' },
-    { id: 203, name: 'Guaraná Antarctica 1,5L', price: 13.00, image: 'media/drinks_nobg/guarana-litro-removebg-preview.png', category: 'refrigerante' },
-    { id: 204, name: 'Guaraná Zero 1,5L', price: 13.00, image: 'media/drinks_nobg/guarana-zero-litro-removebg-preview.png', category: 'refrigerante' },
-    { id: 205, name: 'Sprite 1,5L', price: 13.00, image: 'media/drinks_nobg/Sprite.png', category: 'refrigerante' },
-    { id: 206, name: 'Fanta 1,5L', price: 13.00, image: 'media/drinks_nobg/Fanta.png', category: 'refrigerante' },
-    { id: 207, name: 'Água Mineral Puríssima 1,5L', price: 10.00, image: 'media/drinks_nobg/purissima-1.5l-removebg-preview.png', category: 'agua' },
+    { id: 201, name: 'Coca-Cola 1,5L', price: 16.00, image: 'media/drinks_nobg/Coca-cola.png', category: 'refrigerante' },
+    { id: 202, name: 'Coca-Cola Zero 1,5L', price: 16.00, image: 'media/drinks_nobg/Coca-zero.png', category: 'refrigerante' },
+    { id: 203, name: 'Guaraná Antarctica 1,5L', price: 15.00, image: 'media/drinks_nobg/guarana-litro-removebg-preview.png', category: 'refrigerante' },
+    { id: 204, name: 'Guaraná Zero 1,5L', price: 15.00, image: 'media/drinks_nobg/guarana-zero-litro-removebg-preview.png', category: 'refrigerante' },
+    { id: 205, name: 'Sprite 1,5L', price: 15.00, image: 'media/drinks_nobg/Sprite.png', category: 'refrigerante' },
+    { id: 206, name: 'Fanta 1,5L', price: 15.00, image: 'media/drinks_nobg/Fanta.png', category: 'refrigerante' },
+    { id: 207, name: 'Água Mineral Puríssima 1,5L', price: 12.00, image: 'media/drinks_nobg/purissima-1.5l-removebg-preview.png', category: 'agua' },
     { id: 208, name: 'Coca-Cola Lata 310ml', price: 8.90, image: 'media/drinks_nobg/coca-cola-310ml-1-removebg-preview.png', category: 'refrigerante' },
     { id: 209, name: 'Coca Zero Lata 310ml', price: 8.90, image: 'media/drinks_nobg/coca-zero-310ml.png', category: 'refrigerante' },
     { id: 210, name: 'Guaraná Lata 350ml', price: 8.90, image: 'media/drinks_nobg/Guarana-lata.png', category: 'refrigerante' },
@@ -149,16 +149,16 @@ const CERVEJAS = [
 // ── DADOS: SUCOS ──
 const SUCOS = [
     { id: 401, name: 'Suco de Laranja 1L', description: 'Suco natural de laranja', price: 29.90, image: null, category: 'natural' },
-    { id: 402, name: 'Suco Laranja com Acerola 1L', description: 'Suco natural de laranja com acerola', price: 29.90, image: null, category: 'natural' },
+    { id: 402, name: 'Suco Laranja com Acerola 1L', description: 'Suco natural de laranja com acerola', price: 35.90, image: null, category: 'mista' },
     { id: 403, name: 'Suco de Abacaxi 1L', description: 'Suco natural de abacaxi', price: 29.90, image: null, category: 'natural' },
     { id: 404, name: 'Suco de Limão 1L', description: 'Suco natural de limão', price: 29.90, image: null, category: 'natural' },
     { id: 405, name: 'Suco de Maracujá 1L', description: 'Suco natural de maracujá', price: 29.90, image: null, category: 'natural' },
-    { id: 406, name: 'Suco Verde 1L', description: 'Laranja, couve, hortelã, manjericão e gengibre', price: 29.90, image: null, category: 'natural' },
-    { id: 407, name: 'Suco Vermelho 1L', description: 'Laranja, cenoura e beterraba', price: 29.90, image: null, category: 'natural' },
-    { id: 408, name: 'Suco Abacaxi com Hortelã 1L', description: 'Suco natural de abacaxi com hortelã', price: 29.90, image: null, category: 'natural' },
+    { id: 406, name: 'Suco Verde 1L', description: 'Laranja, couve, hortelã, manjericão e gengibre', price: 35.90, image: null, category: 'natural' },
+    { id: 408, name: 'Suco Abacaxi com Hortelã 1L', description: 'Suco natural de abacaxi com hortelã', price: 35.90, image: null, category: 'mista' },
     { id: 409, name: 'Suco de Acerola 1L', description: 'Suco de polpa de acerola', price: 29.90, image: null, category: 'polpa' },
     { id: 410, name: 'Suco de Morango 1L', description: 'Suco de polpa de morango', price: 29.90, image: null, category: 'polpa' },
-    { id: 411, name: 'Suco de Uva 1L', description: 'Suco de polpa de uva', price: 29.90, image: null, category: 'polpa' }
+    { id: 411, name: 'Suco de Uva 1L', description: 'Suco de polpa de uva', price: 29.90, image: null, category: 'polpa' },
+    { id: 412, name: 'Suco Laranja com Morango 1L', description: 'Suco natural de laranja com morango', price: 35.90, image: null, category: 'mista' }
 ];
 
 // ── STATE ──

@@ -7,21 +7,16 @@
 
 // ── CONFIG ──
 const CONFIG = {
-    whatsapp: '5565981572829',
-    endereco: 'R. Mal. Floriano Peixoto, 982, Duque de Caxias, Cuiabá - MT',
-    horarioAbertura: 18,
-    horarioFechamento: 23,
-    diaSemanaFechado: 1,
     placeholders: {
         pizza: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Crect fill='%23222'  width='200' height='200'/%3E%3Ctext x='100' y='108' text-anchor='middle' fill='%23555' font-size='40'%3E🍕%3C/text%3E%3C/svg%3E",
         pizzaDoce: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Crect fill='%23222' width='200' height='200'/%3E%3Ctext x='100' y='108' text-anchor='middle' fill='%23555' font-size='40'%3E🍫%3C/text%3E%3C/svg%3E",
         bebida: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Crect fill='%23222' width='200' height='200'/%3E%3Ctext x='100' y='108' text-anchor='middle' fill='%23555' font-size='40'%3E🥤%3C/text%3E%3C/svg%3E",
         suco: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Crect fill='%23222' width='200' height='200'/%3E%3Ctext x='100' y='108' text-anchor='middle' fill='%23555' font-size='40'%3E🧃%3C/text%3E%3C/svg%3E",
-        cerveja: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Crect fill='%23222' width='200' height='200'/%3E%3Ctext x='100' y='108' text-anchor='middle' fill='%23555' font-size='40'%3E🍺%3C/text%3E%3C/svg%3E"
+        cerveja: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Crect fill='%23222' width='200' height='200'/%3E%3Ctext x='100' y='108' text-anchor='middle' fill='%23555' font-size='40'%3E🍺%3C/text%3E%3C/svg%3E",
+        outro: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Crect fill='%23222' width='200' height='200'/%3E%3Ctext x='100' y='108' text-anchor='middle' fill='%23555' font-size='40'%3E🍽️%3C/text%3E%3C/svg%3E"
     }
 };
 
-// ── DADOS: TAMANHOS & BORDAS ──
 const TAMANHOS = [
     { id: 'broto', nome: 'Broto', fatias: 2, sabores: 1, index: 0 },
     { id: 'pequena', nome: 'Pequena', fatias: 4, sabores: 2, index: 1 },
@@ -29,142 +24,45 @@ const TAMANHOS = [
     { id: 'grande', nome: 'Grande', fatias: 8, sabores: 3, index: 3 }
 ];
 
-const BORDAS = [
-    { id: 'sem-borda', nome: 'Sem Borda', preco: 0 },
-    { id: 'cream-cheese', nome: 'Cream Cheese', preco: 19 },
-    { id: 'catupiry', nome: 'Catupiry', preco: 19 },
-    { id: 'cheddar', nome: 'Cheddar', preco: 19 },
-    { id: 'chocolate', nome: 'Chocolate', preco: 19 },
-    { id: 'goiabada', nome: 'Goiabada', preco: 19 },
-    { id: 'doce-leite', nome: 'Doce de Leite', preco: 19 }
-];
+const ICONES = {
+    pizza: { css: 'pizzas', fa: 'fa-pizza-slice', placeholder: 'pizza', emoji: '🍕', titulo: 'Adicionar ao Pedido' },
+    doce: { css: 'doces', fa: 'fa-cookie-bite', placeholder: 'pizzaDoce', emoji: '🍫', titulo: 'Adicionar Sobremesa' },
+    bebida: { css: 'bebidas', fa: 'fa-glass-water', placeholder: 'bebida', emoji: '🥤', titulo: 'Adicionar Bebida' },
+    suco: { css: 'sucos', fa: 'fa-blender', placeholder: 'suco', emoji: '🧃', titulo: 'Adicionar Bebida' },
+    cerveja: { css: 'cervejas', fa: 'fa-beer-mug-empty', placeholder: 'cerveja', emoji: '🍺', titulo: 'Adicionar Bebida' },
+    outro: { css: 'outro', fa: 'fa-utensils', placeholder: 'outro', emoji: '🍽️', titulo: 'Adicionar ao Pedido' }
+};
 
-// ── DADOS: PIZZAS SALGADAS ──
-const PIZZAS_SALGADAS = [
-    { id: 1, name: 'Mussarela', description: 'Molho, mussarela, parmesão, azeitona e orégano', prices: [58.90, 75.90, 93.90, 105.90], image: 'media/flavors/ifood_ready/Mussarela.jpeg' },
-    { id: 2, name: 'Portuguesa', description: 'Molho, mussarela, presunto, tomate, ovos, cebola, pimentão, azeitona e orégano', prices: [58.90, 75.90, 93.90, 105.90], image: 'media/flavors/ifood_ready/Portuguesaa.jpeg' },
-    { id: 3, name: 'Tradicional', description: 'Molho, mussarela, presunto, azeitona e orégano', prices: [58.90, 75.90, 93.90, 105.90], image: 'media/flavors/ifood_ready/Tradicional.jpeg' },
-    { id: 4, name: 'Napolitana', description: 'Molho, mussarela, parmesão, tomate, azeitona e orégano', prices: [58.90, 75.90, 93.90, 105.90], image: 'media/flavors/ifood_ready/Napolitana.jpeg' },
-    { id: 5, name: 'Calabresa', description: 'Molho, mussarela, calabresa, cebola, azeitona e orégano', prices: [58.90, 75.90, 93.90, 105.90], image: 'media/flavors/ifood_ready/Calabresa.jpeg' },
-    { id: 6, name: 'Calabresa Especial', description: 'Molho, mussarela, calabresa moída pré-assada, catupiry, uma pitadinha de pimenta calabresa, cebola, azeitona e orégano', prices: [58.90, 75.90, 93.90, 105.90], image: 'media/flavors/ifood_ready/Calabresa-especial.jpeg' },
-    { id: 7, name: 'Toscana', description: 'Molho, calabresa moída, mussarela, catupiry, azeitona e orégano', prices: [58.90, 75.90, 93.90, 105.90], image: 'media/flavors/ifood_ready/Toscana.jpeg' },
-    { id: 8, name: 'Dom Camilo', description: 'Molho, mussarela, presunto, calabresa, creme de leite, azeitona e orégano', prices: [58.90, 75.90, 93.90, 105.90], image: 'media/flavors/ifood_ready/Dom-Camilo.jpeg' },
-    { id: 9, name: 'Mexicana', description: 'Molho, mussarela, calabresa moída, pimenta calabresa, azeitona e orégano', prices: [58.90, 75.90, 93.90, 105.90], image: 'media/flavors/ifood_ready/Mexicana.jpeg' },
-    { id: 10, name: 'Catupiry', description: 'Molho, mussarela, catupiry, azeitona e orégano', prices: [58.90, 75.90, 93.90, 105.90], image: 'media/flavors/ifood_ready/Catupiry.jpeg' },
-    { id: 11, name: 'Frango com Catupiry', description: 'Molho, mussarela, peito de frango, catupiry, azeitona e orégano', prices: [58.90, 75.90, 93.90, 105.90], image: 'media/flavors/ifood_ready/Frango-Catupiry.jpeg' },
-    { id: 12, name: 'Frango Especial', description: 'Molho, mussarela, peito de frango, cebola, tomate seco, manjericão, azeitona e orégano', prices: [64.90, 87.90, 102.90, 116.90], image: 'media/flavors/ifood_ready/Frango-especial.jpeg' },
-    { id: 13, name: 'À Brasileira', description: 'Molho, mussarela, peito de frango, milho verde, azeitona e orégano', prices: [58.90, 75.90, 93.90, 105.90], image: 'media/flavors/ifood_ready/A-Brasileira.jpeg' },
-    { id: 14, name: 'Atum', description: 'Molho, mussarela, atum, tomate, cebola, azeitona e orégano', prices: [58.90, 75.90, 93.90, 105.90], image: 'media/flavors/ifood_ready/Atum.jpeg' },
-    { id: 15, name: 'Pizza Hit', description: 'Molho, mussarela, catupiry, presunto, bacon, champignon, cebola, azeitona e orégano', prices: [58.90, 75.90, 93.90, 105.90], image: 'media/flavors/ifood_ready/hit.jpeg' },
-    { id: 16, name: 'Marguerita', description: 'Molho, mussarela, manjericão fresco, tomate, parmesão, azeitona e orégano', prices: [58.90, 75.90, 93.90, 105.90], image: 'media/flavors/ifood_ready/Margherita.jpeg' },
-    { id: 17, name: 'Marguerita Especial', description: 'Molho, mussarela, manjericão fresco, tomate, alho gratinado, tomate seco, parmesão, azeitona e orégano', prices: [58.90, 75.90, 93.90, 105.90], image: 'media/flavors/ifood_ready/Margherita-especial.jpeg' },
-    { id: 18, name: 'Aliche', description: 'Molho, mussarela, parmesão, aliche, azeitona e orégano', prices: [59.90, 83.90, 102.90, 112.90], image: 'media/flavors/ifood_ready/Aliche.jpeg' },
-    { id: 19, name: 'Bacon', description: 'Molho, mussarela, bacon, ovos, azeitona e orégano', prices: [58.90, 75.90, 93.90, 105.90], image: 'media/flavors/ifood_ready/Bacon.jpeg' },
-    { id: 20, name: 'Alho e Óleo', description: 'Molho, mussarela, parmesão, alho gratinado no azeite, azeitona e orégano', prices: [58.90, 75.90, 93.90, 105.90], image: 'media/flavors/ifood_ready/Alho-e-Oleo.jpeg' },
-    { id: 21, name: 'Lombo ao Creme', description: 'Molho, mussarela, lombinho canadense, requeijão cremoso, tomate, azeitona e orégano', prices: [58.90, 75.90, 93.90, 105.90], image: 'media/flavors/ifood_ready/Lombo-ao-Creme.jpeg' },
-    { id: 22, name: 'Genovesa', description: 'Molho, mussarela, presunto, creme de leite, azeitona e orégano', prices: [58.90, 75.90, 93.90, 105.90], image: 'media/flavors/ifood_ready/Genovesa.jpeg' },
-    { id: 23, name: 'Palmito', description: 'Molho, mussarela, palmito, tomate, azeitona e orégano', prices: [58.90, 75.90, 93.90, 105.90], image: 'media/flavors/ifood_ready/Palmito.jpeg' },
-    { id: 24, name: 'Quatro Queijos', description: 'Molho, mussarela, catupiry, gorgonzola, provolone, parmesão, azeitona e orégano', prices: [58.90, 75.90, 93.90, 105.90], image: 'media/flavors/ifood_ready/Quatro-Queijos.jpeg' },
-    { id: 25, name: 'Super Hit', description: 'Molho, mussarela, catupiry, presunto, calabresa, bacon, champignon, requeijão, cebola, azeitona e orégano', prices: [64.90, 87.90, 102.90, 116.90], image: 'media/flavors/ifood_ready/Super-hit.jpeg' },
-    { id: 26, name: 'Caprese', description: 'Molho, mussarela, tomate, manjericão, mussarela de búfala, pasta de azeitona preta, azeitona e orégano', prices: [59.90, 83.90, 102.90, 112.90], image: 'media/flavors/ifood_ready/caprese.jpeg' },
-    { id: 27, name: 'Pizza do Chef', description: 'Molho, mussarela, ricota, tomate cereja, manjericão, azeitona e orégano', prices: [59.90, 83.90, 102.90, 112.90], image: 'media/flavors/ifood_ready/Pizza-do-chef.jpeg' },
-    { id: 28, name: 'Dom Valério', description: 'Molho, mussarela, palmito, catupiry, bacon, azeitona e orégano', prices: [59.90, 83.90, 102.90, 112.90], image: 'media/flavors/ifood_ready/Dom-Valerio.jpeg' },
-    { id: 29, name: 'Moda Arací', description: 'Molho, mussarela, ricota, provolone, presunto, ovos, bacon e orégano', prices: [58.90, 75.90, 93.90, 105.90], image: 'media/flavors/ifood_ready/moda-araci.jpeg' },
-    { id: 30, name: 'Vegetariana', description: 'Molho, mussarela, champignon, tomate, cebola, pimentão verde, azeitona e orégano', prices: [59.90, 83.90, 102.90, 112.90], image: 'media/flavors/ifood_ready/Vegetariana.jpeg' },
-    { id: 31, name: 'Escarola', description: 'Molho, mussarela, escarola, catupiry, bacon, azeitona e orégano', prices: [58.90, 75.90, 93.90, 105.90], image: 'media/flavors/ifood_ready/Escarola.jpeg' },
-    { id: 32, name: 'Brócolis', description: 'Molho, mussarela, brócolis, bacon, alho gratinado, catupiry, azeitona e orégano', prices: [58.90, 75.90, 93.90, 105.90], image: 'media/flavors/ifood_ready/Brocolis.jpeg' },
-    { id: 33, name: 'Brócolis com Berinjela', description: 'Molho, mussarela, brócolis, berinjela em pasta, azeitona e orégano', prices: [55.90, 81.90, 90.90, 105.90], image: 'media/flavors/ifood_ready/brocolis-berinjela.jpeg' },
-    { id: 34, name: 'Berinjela', description: 'Molho, mussarela, berinjela em pasta, tomate seco, cebola, azeitona e orégano', prices: [59.90, 83.90, 102.90, 112.90], image: 'media/flavors/ifood_ready/Berinjela.jpeg' },
-    { id: 35, name: 'Rúcula', description: 'Molho, mussarela, rúcula, tomate seco, mussarela de búfala, azeitona e orégano', prices: [59.90, 83.90, 102.90, 112.90], image: 'media/flavors/ifood_ready/Rucula.jpeg' },
-    { id: 36, name: 'Milho', description: 'Molho, mussarela, milho, azeitona e orégano', prices: [58.90, 75.90, 93.90, 105.90], image: 'media/flavors/ifood_ready/milho.jpeg' },
-    { id: 37, name: 'Milho com Catupiry', description: 'Molho, mussarela, catupiry, milho, azeitona e orégano', prices: [58.90, 75.90, 93.90, 105.90], image: 'media/flavors/ifood_ready/Milho-com-catupiry.jpeg' },
-    { id: 38, name: 'Super Portuguesa', description: 'Molho, mussarela, presunto, calabresa, tomate, ovos, cebola, azeitona, pimentão e orégano', prices: [64.90, 87.90, 102.90, 116.90], image: 'media/flavors/ifood_ready/Super-Portuguesa.jpeg' },
-    { id: 39, name: 'Super Quatro Queijos', description: 'Molho, mussarela, catupiry, gorgonzola, provolone, tomate seco, azeitona, parmesão e orégano', prices: [64.90, 87.90, 102.90, 116.90], image: 'media/flavors/ifood_ready/Super-quatro-queijos.jpeg' },
-    { id: 40, name: 'Strogonoff de Frango', description: 'Molho, mussarela, peito de frango, creme de leite, palmito, azeitona, orégano e batata palha', prices: [64.90, 87.90, 102.90, 116.90], image: 'media/flavors/ifood_ready/strogonoff-frango.jpeg' },
-    { id: 41, name: 'Strogonoff de Filé', description: 'Molho, mussarela, filé, creme de leite, champignon, batata palha, azeitona e orégano', prices: [64.90, 87.90, 102.90, 116.90], image: 'media/flavors/ifood_ready/Strogonoff-file.jpeg' },
-    { id: 42, name: 'Filé Especial', description: 'Molho, mussarela, filé, tomate cereja, azeitona e orégano', prices: [64.90, 87.90, 102.90, 116.90], image: 'media/flavors/ifood_ready/File-Especial.jpeg' },
-    { id: 43, name: 'Pantaneira', description: 'Molho, mussarela, carne seca, catupiry, creme de leite, banana da terra frita, azeitona e orégano', prices: [64.90, 87.90, 102.90, 116.90], image: 'media/flavors/ifood_ready/Pantanera.jpeg' },
-    { id: 44, name: 'Suíça', description: 'Molho, mussarela, lombo canadense, catupiry, azeitona e orégano', prices: [55.90, 81.90, 90.90, 105.90], image: 'media/flavors/ifood_ready/Suica.jpeg' },
-    { id: 45, name: 'Camarão', description: 'Molho, mussarela, camarão, creme de leite, parmesão, batata palha, azeitona e orégano', prices: [65.90, 89.90, 104.90, 119.20], image: 'media/flavors/ifood_ready/Camarao.jpeg' },
-    { id: 46, name: 'Bacalhau', description: 'Molho, mussarela, bacalhau refogado no azeite, tomate, pimentão, cebola, ovos, azeitona e orégano', prices: [65.90, 89.90, 104.90, 119.20], image: 'media/flavors/ifood_ready/Bacalhau.jpeg' },
-    { id: 47, name: 'Mussarela de Búfala', description: 'Molho, mussarela de búfala, rodelas de tomate, presunto, azeitona e orégano', prices: [59.90, 83.90, 102.90, 112.90], image: 'media/flavors/ifood_ready/Mussarela-bufala.jpeg' },
-    { id: 48, name: 'Abobrinha', description: 'Molho, abobrinha refogada, mussarela de búfala, parmesão, azeitona e orégano', prices: [59.90, 83.90, 102.90, 112.90], image: 'media/flavors/ifood_ready/Abobrinha.jpeg' },
-    { id: 49, name: 'Light', description: 'Molho, mussarela, ricota, tomate seco, manjericão, azeitona e orégano', prices: [59.90, 83.90, 102.90, 112.90], image: 'media/flavors/ifood_ready/Light.jpeg' },
-    { id: 50, name: 'Pepperone', description: 'Molho, mussarela, pepperone, azeitona e orégano', prices: [59.90, 83.90, 102.90, 112.90], image: 'media/flavors/ifood_ready/Peperone.jpeg' },
-    { id: 51, name: 'Peito de Peru', description: 'Molho, mussarela, peito de peru, catupiry, azeitona e orégano', prices: [55.90, 81.90, 90.90, 105.90], image: 'media/flavors/ifood_ready/Peito-de-peru.jpeg' },
-    { id: 52, name: 'Basílica', description: 'Molho, mussarela, tomate cereja, pesto de rúcula, azeitona e orégano', prices: [59.90, 83.90, 102.90, 112.90], image: 'media/flavors/ifood_ready/basilica.jpeg' },
-    { id: 53, name: 'Caprese com Pepperone', description: 'Molho, mussarela, pepperone, tomate, mussarela de búfala, manjericão, pasta de azeitona preta e orégano', prices: [59.90, 83.90, 102.90, 112.90], image: 'media/flavors/ifood_ready/Caprese-com-peperone.jpeg' },
-    { id: 54, name: 'Presunto de Parma', description: 'Molho de tomate, mussarela de Búfala, tomate cereja, presunto de Parma, azeitona preta e orégano', prices: [64.90, 87.90, 102.90, 116.90], image: 'media/flavors/ifood_ready/presunto-de-parma.jpeg' },
-    { id: 55, name: 'Vegetariana Hit', description: 'Molho de tomate, mussarela de Búfala, tomate cereja, palmito, brócolis, abobrinha, azeitona e orégano', prices: [65.90, 89.90, 104.90, 119.20], image: 'media/flavors/ifood_ready/Vegetariana-Hit.jpeg' }
-];
+// ── DADOS (menu.json) ──
+let MENU = null;
+let INDICE = new Map();
+let BORDAS = [];
 
-// ── DADOS: PIZZAS DOCES ──
-const PIZZAS_DOCES = [
-    { id: 110, name: 'Brownie', description: 'Brownie da Brown\'s - escolha Ninho ou Chocolate', price: 18.00, image: 'media/flavors/sweet_flavors/ifood_ready/brownie-hit-black.png', options: ['Ninho', 'Chocolate'] },
-    { id: 101, name: 'California', description: 'Creme de leite, mussarela, lombo, figo, pêssego, ameixa e orégano', prices: [55.90, 81.90, 90.90, 105.90], image: null },
-    { id: 102, name: 'Salada de Fruta', description: 'Creme de leite, mussarela, pêssego, figo, ameixa, cereja e orégano', prices: [55.90, 81.90, 90.90, 105.90], image: null },
-    { id: 103, name: 'Romeu e Julieta', description: 'Creme de leite, mussarela, banana, doce de goiaba e canela', prices: [55.90, 81.90, 90.90, 105.90], image: null },
-    { id: 104, name: 'Banana', description: 'Creme de leite, mussarela, banana, leite condensado e canela', prices: [55.90, 81.90, 90.90, 105.90], image: 'media/flavors/sweet_flavors/ifood_ready/banana.jpeg' },
-    { id: 105, name: 'Chocolate com Granulado', description: 'Creme de leite, chocolate e granulado', prices: [55.90, 81.90, 90.90, 105.90], image: 'media/flavors/sweet_flavors/ifood_ready/Chocolate.jpeg' },
-    { id: 106, name: 'Chocolate com Cereja', description: 'Creme de leite, chocolate e cereja', prices: [55.90, 81.90, 90.90, 105.90], image: 'media/flavors/sweet_flavors/ifood_ready/chocolate-cereja.jpeg' },
-    { id: 107, name: 'Chocolate com Côco', description: 'Creme de leite, chocolate e coco', prices: [55.90, 81.90, 90.90, 105.90], image: 'media/flavors/sweet_flavors/ifood_ready/chocolate-coco.jpeg' },
-    { id: 108, name: 'Chocolate com Castanha de Caju', description: 'Creme de leite, chocolate e castanha de caju', prices: [55.90, 81.90, 90.90, 105.90], image: null },
-    { id: 109, name: 'Chocolate com Banana', description: 'Creme de leite, mussarela, banana e chocolate', prices: [55.90, 81.90, 90.90, 105.90], image: null }
-];
-
-// ── DADOS: BEBIDAS ──
-const BEBIDAS = [
-    { id: 201, name: 'Coca-Cola 1,5L', price: 16.00, image: 'media/drinks_nobg/Coca-cola.png', category: 'refrigerante' },
-    { id: 202, name: 'Coca-Cola Zero 1,5L', price: 16.00, image: 'media/drinks_nobg/Coca-zero.png', category: 'refrigerante' },
-    { id: 203, name: 'Guaraná Antarctica 1,5L', price: 15.00, image: 'media/drinks_nobg/guarana-litro-removebg-preview.png', category: 'refrigerante' },
-    { id: 204, name: 'Guaraná Zero 1,5L', price: 15.00, image: 'media/drinks_nobg/guarana-zero-litro-removebg-preview.png', category: 'refrigerante' },
-    { id: 205, name: 'Sprite 1,5L', price: 15.00, image: 'media/drinks_nobg/Sprite.png', category: 'refrigerante' },
-    { id: 206, name: 'Fanta 1,5L', price: 15.00, image: 'media/drinks_nobg/Fanta.png', category: 'refrigerante' },
-    { id: 207, name: 'Água Mineral Puríssima 1,5L', price: 12.00, image: 'media/drinks_nobg/purissima-1.5l-removebg-preview.png', category: 'agua' },
-    { id: 208, name: 'Coca-Cola Lata 310ml', price: 8.90, image: 'media/drinks_nobg/coca-cola-310ml-1-removebg-preview.png', category: 'refrigerante' },
-    { id: 209, name: 'Coca Zero Lata 310ml', price: 8.90, image: 'media/drinks_nobg/coca-zero-310ml.png', category: 'refrigerante' },
-    { id: 210, name: 'Guaraná Lata 350ml', price: 8.90, image: 'media/drinks_nobg/Guarana-lata.png', category: 'refrigerante' },
-    { id: 211, name: 'Guaraná Zero Lata 350ml', price: 8.90, image: 'media/drinks_nobg/guarana-lata-zero.png', category: 'refrigerante' },
-    { id: 212, name: 'Schweppes Citrus 310ml', price: 8.90, image: 'media/drinks_nobg/schweppes-310ml-removebg-preview.png', category: 'refrigerante' },
-    { id: 213, name: 'Schweppes Tônica 310ml', price: 8.90, image: 'media/drinks_nobg/schweppes-tonica-310ml-removebg-preview.png', category: 'refrigerante' },
-    { id: 214, name: 'Sprite Lata 350ml', price: 8.90, image: 'media/drinks_nobg/sprite-lata.png', category: 'refrigerante' },
-    { id: 215, name: 'Fanta Lata 350ml', price: 8.90, image: 'media/drinks_nobg/Fanta-lata.png', category: 'refrigerante' },
-    { id: 216, name: 'Água Mineral Puríssima 497ml', price: 6.00, image: 'media/drinks_nobg/purissima-497ml-removebg-preview.png', category: 'agua' },
-    { id: 217, name: 'Água com Gás Puríssima 497ml', price: 7.90, image: 'media/drinks_nobg/purissima-497ml-comgas-removebg-preview.png', category: 'agua' },
-    { id: 218, name: 'Aquárius Lemon 510ml', price: 8.00, image: 'media/drinks_nobg/Aquarius-lemon.png', category: 'agua' }
-];
-
-// ── DADOS: CERVEJAS ──
-const CERVEJAS = [
-    { id: 301, name: 'Budweiser Long Neck', price: 13.90, image: 'media/drinks_nobg/budweiser.png' },
-    { id: 302, name: 'Stella Artois Long Neck', price: 13.90, image: 'media/drinks_nobg/Stella.png' },
-    { id: 303, name: 'Malzbier Long Neck', price: 13.90, image: 'media/drinks_nobg/malzbier.png' },
-    { id: 304, name: 'Bohemia Long Neck', price: 13.90, image: 'media/drinks_nobg/bohemia.png' },
-    { id: 305, name: 'Heineken Long Neck', price: 15.90, image: 'media/drinks_nobg/heineken.png' },
-    { id: 306, name: 'Eisenbahn Long Neck', price: 13.90, image: 'media/drinks_nobg/Eisenbahn.png' },
-    { id: 307, name: 'Heineken Zero Long Neck', price: 15.90, image: 'media/drinks_nobg/heineken-zero.png' },
-    { id: 308, name: 'Corona Long Neck', price: 15.90, image: 'media/drinks_nobg/corona.png' }
-];
-
-// ── DADOS: SUCOS ──
-const SUCOS = [
-    { id: 401, name: 'Suco de Laranja 1L', description: 'Suco natural de laranja', price: 29.90, image: null, category: 'natural' },
-    { id: 402, name: 'Suco Laranja com Acerola 1L', description: 'Suco natural de laranja com acerola', price: 35.90, image: null, category: 'mista' },
-    { id: 403, name: 'Suco de Abacaxi 1L', description: 'Suco natural de abacaxi', price: 29.90, image: null, category: 'natural' },
-    { id: 404, name: 'Suco de Limão 1L', description: 'Suco natural de limão', price: 29.90, image: null, category: 'natural' },
-    { id: 405, name: 'Suco de Maracujá 1L', description: 'Suco natural de maracujá', price: 29.90, image: null, category: 'natural' },
-    { id: 406, name: 'Suco Verde 1L', description: 'Laranja, couve, hortelã, manjericão e gengibre', price: 35.90, image: null, category: 'natural' },
-    { id: 408, name: 'Suco Abacaxi com Hortelã 1L', description: 'Suco natural de abacaxi com hortelã', price: 35.90, image: null, category: 'mista' },
-    { id: 409, name: 'Suco de Acerola 1L', description: 'Suco de polpa de acerola', price: 29.90, image: null, category: 'polpa' },
-    { id: 410, name: 'Suco de Morango 1L', description: 'Suco de polpa de morango', price: 29.90, image: null, category: 'polpa' },
-    { id: 411, name: 'Suco de Uva 1L', description: 'Suco de polpa de uva', price: 29.90, image: null, category: 'polpa' },
-    { id: 412, name: 'Suco Laranja com Morango 1L', description: 'Suco natural de laranja com morango', price: 35.90, image: null, category: 'mista' }
-];
+const Dados = {
+    async carregar() {
+        const resposta = await fetch('menu.json', { cache: 'no-cache' });
+        if (!resposta.ok) throw new Error('menu.json ' + resposta.status);
+        MENU = await resposta.json();
+        INDICE = MenuCore.indexar(MENU);
+        BORDAS = MenuCore.bordas(MENU);
+    },
+    precos(item) { return MenuCore.precosDe(MENU, item); },
+    icone(categoria) { return ICONES[categoria.icone] || ICONES.outro; },
+    vendavel(item) {
+        if (item.disponivel === false) return false;
+        if (!MenuCore.ehPizza(item)) return typeof item.preco === 'number';
+        const precos = this.precos(item);
+        return !!precos && precos.length === 4 && precos.every(n => typeof n === 'number');
+    },
+    visiveis(categoria) { return categoria.itens.filter(i => this.vendavel(i)); },
+    sabores(categoria) { return this.visiveis(categoria).filter(i => MenuCore.ehPizza(i)); }
+};
 
 // ── STATE ──
 const AppState = {
     cart: [],
     currentPizza: null,
+    currentCategoria: null,
     currentStep: 1,
     selectedSize: null,
     selectedFlavors: [],
@@ -181,10 +79,10 @@ const Utils = {
         return value.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
     },
     isOpen() {
-        const now = new Date();
-        if (now.getDay() === CONFIG.diaSemanaFechado) return false;
-        const h = now.getHours();
-        return h >= CONFIG.horarioAbertura && h < CONFIG.horarioFechamento;
+        return MenuCore.estaAberto(MENU.loja, new Date());
+    },
+    esc(texto) {
+        return String(texto).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
     },
     generateId() {
         return 'c_' + Date.now() + '_' + Math.random().toString(36).substr(2, 6);
@@ -216,56 +114,86 @@ const Render = {
         text.textContent = isOpen ? 'Aberto' : 'Fechado';
     },
 
-    pizzaCard(p) {
-        const isDoce = p.id >= 100;
-        const ph = isDoce ? CONFIG.placeholders.pizzaDoce : CONFIG.placeholders.pizza;
-        const hasImage = !!p.image;
-        const isFixedPrice = typeof p.price === 'number';
-        const priceHTML = isFixedPrice
-            ? Utils.formatCurrency(p.price)
-            : `<span>a partir de </span>${Utils.formatCurrency(Math.min(...p.prices))}`;
-        const action = isFixedPrice
-            ? `App.openDessertModal(${p.id})`
-            : `App.openPizzaModal(${p.id},'${isDoce?'doce':'salgada'}')`;
-        const imageHTML = hasImage
-            ? `<div class="pizza-card-image"><img src="${p.image}" alt="${p.name}" loading="lazy" onerror="this.src='${ph}'"></div>`
-            : `<div class="pizza-card-image no-image"><span class="pizza-placeholder-icon">${isDoce ? '🍫' : '🍕'}</span></div>`;
-        const descHTML = p.description ? `<div class="pizza-card-desc">${p.description}</div>` : '';
+    renderLoja() {
+        const loja = MENU.loja;
+        const h = MenuCore.textoHorario(loja);
+        const partes = loja.endereco.split(', ').map(Utils.esc);
+        const endereco = partes.length > 2 ? partes.slice(0, 2).join(', ') + '<br>' + partes.slice(2).join(', ') : partes.join(', ');
+        document.getElementById('info-horario').innerHTML = Utils.esc(`${h.dias}: ${h.abre} às ${h.fecha}`) + (h.fechado ? `<br>${Utils.esc(h.fechado)}` : '');
+        document.getElementById('info-endereco').innerHTML = endereco;
+        document.getElementById('info-whatsapp').textContent = MenuCore.formatarWhatsapp(loja.whatsapp);
+        document.getElementById('hero-hours-text').textContent = `${h.dias} • ${h.abre} – ${h.fecha}`;
+    },
+
+    pizzaCard(p, categoria) {
+        const icone = Dados.icone(categoria);
+        const ph = CONFIG.placeholders[icone.placeholder];
+        const precos = Dados.precos(p);
+        const priceHTML = precos
+            ? `<span>a partir de </span>${Utils.formatCurrency(Math.min(...precos))}`
+            : Utils.formatCurrency(p.preco);
+        const action = precos ? `App.openPizzaModal(${p.id})` : `App.openProductModal(${p.id})`;
+        const nome = Utils.esc(p.nome);
+        const imageHTML = p.imagem
+            ? `<div class="pizza-card-image"><img src="${Utils.esc(p.imagem)}" alt="${nome}" loading="lazy" onerror="this.src='${ph}'"></div>`
+            : `<div class="pizza-card-image no-image"><span class="pizza-placeholder-icon">${icone.emoji}</span></div>`;
+        const descHTML = p.descricao ? `<div class="pizza-card-desc">${Utils.esc(p.descricao)}</div>` : '';
         return `<div class="pizza-card" onclick="${action}">
             ${imageHTML}
             <div class="pizza-card-body">
-                <div class="pizza-card-name">${p.name}</div>
+                <div class="pizza-card-name">${nome}</div>
                 ${descHTML}
                 <div class="pizza-card-price">${priceHTML}</div>
             </div>
         </div>`;
     },
 
-    drinkCard(d, type = 'bebida') {
-        const ph = CONFIG.placeholders[type] || CONFIG.placeholders.bebida;
-        const img = d.image || ph;
-        return `<div class="drink-card" onclick="App.openDrinkModal(${d.id},'${type}')">
-            <div class="drink-card-image"><img src="${img}" alt="${d.name}" loading="lazy" onerror="this.src='${ph}'"></div>
+    drinkCard(d, categoria) {
+        const ph = CONFIG.placeholders[Dados.icone(categoria).placeholder];
+        const nome = Utils.esc(d.nome);
+        return `<div class="drink-card" onclick="App.openProductModal(${d.id})">
+            <div class="drink-card-image"><img src="${Utils.esc(d.imagem || ph)}" alt="${nome}" loading="lazy" onerror="this.src='${ph}'"></div>
             <div class="drink-card-body">
-                <div class="drink-card-name">${d.name}</div>
-                ${d.description ? `<div class="drink-card-desc">${d.description}</div>` : ''}
-                <div class="drink-card-price">${Utils.formatCurrency(d.price)}</div>
+                <div class="drink-card-name">${nome}</div>
+                ${d.descricao ? `<div class="drink-card-desc">${Utils.esc(d.descricao)}</div>` : ''}
+                <div class="drink-card-price">${Utils.formatCurrency(d.preco)}</div>
             </div>
         </div>`;
     },
 
+    card(item, categoria) {
+        return categoria.tipo === 'pizza' ? this.pizzaCard(item, categoria) : this.drinkCard(item, categoria);
+    },
+
+    section(categoria) {
+        const itens = Dados.visiveis(categoria);
+        if (!itens.length) return '';
+        const icone = Dados.icone(categoria);
+        const pizza = categoria.tipo === 'pizza';
+        const subtitulo = categoria.subtitulo ? `<div class="section-subtitle">${Utils.esc(categoria.subtitulo)}</div>` : '';
+        return `<section class="menu-section" id="sec-${Utils.esc(categoria.id)}">
+            <div class="section-header">
+                <div class="section-icon ${icone.css}"><i class="fas ${icone.fa}"></i></div>
+                <div>
+                    <div class="section-title">${Utils.esc(categoria.nome)}</div>
+                    ${subtitulo}
+                </div>
+                <span class="section-count">${itens.length} ${pizza ? (itens.length === 1 ? 'sabor' : 'sabores') : (itens.length === 1 ? 'item' : 'itens')}</span>
+            </div>
+            <div class="product-grid ${pizza ? 'cols-3' : 'cols-2'}">${itens.map(i => this.card(i, categoria)).join('')}</div>
+        </section>`;
+    },
+
     renderMenu() {
-        document.getElementById('pizzas-salgadas-grid').innerHTML = PIZZAS_SALGADAS.map(p => this.pizzaCard(p)).join('');
-        document.getElementById('pizzas-doces-grid').innerHTML = PIZZAS_DOCES.map(p => this.pizzaCard(p)).join('');
-        document.getElementById('bebidas-grid').innerHTML = BEBIDAS.map(d => this.drinkCard(d, 'bebida')).join('');
-        document.getElementById('sucos-grid').innerHTML = SUCOS.map(d => this.drinkCard(d, 'suco')).join('');
-        document.getElementById('cervejas-grid').innerHTML = CERVEJAS.map(d => this.drinkCard(d, 'cerveja')).join('');
-        // Counts
-        document.getElementById('count-salgadas').textContent = PIZZAS_SALGADAS.length + ' sabores';
-        document.getElementById('count-doces').textContent = PIZZAS_DOCES.length + ' sabores';
-        document.getElementById('count-bebidas').textContent = BEBIDAS.length + ' itens';
-        document.getElementById('count-sucos').textContent = SUCOS.length + ' itens';
-        document.getElementById('count-cervejas').textContent = CERVEJAS.length + ' itens';
+        document.getElementById('all-sections').innerHTML = MENU.categorias.map(c => this.section(c)).join('');
+    },
+
+    renderErroDeCarga() {
+        document.getElementById('all-sections').innerHTML = `<div class="menu-erro">
+            <i class="fas fa-triangle-exclamation"></i>
+            <p>Não foi possível carregar o cardápio.</p>
+            <button class="btn-primary" onclick="location.reload()">Tentar de novo</button>
+        </div>`;
     },
 
     renderSizes() {
@@ -274,20 +202,20 @@ const Render = {
         c.innerHTML = TAMANHOS.map(s => `
             <div class="option-card ${AppState.selectedSize?.id===s.id?'selected':''}" onclick="App.selectSize('${s.id}')">
                 <div><div class="option-name">${s.nome}</div><div class="option-detail">${s.fatias} fatias • até ${s.sabores} sabor(es)</div></div>
-                <div class="option-price">${Utils.formatCurrency(p.prices[s.index])}</div>
+                <div class="option-price">${Utils.formatCurrency(Dados.precos(p)[s.index])}</div>
             </div>`).join('');
     },
 
     renderFlavors() {
         const c = document.getElementById('flavor-options');
-        const all = AppState.currentPizza.id >= 100 ? PIZZAS_DOCES.filter(p => Array.isArray(p.prices)) : PIZZAS_SALGADAS;
+        const all = Dados.sabores(AppState.currentCategoria);
         const si = AppState.selectedSize.index;
         c.innerHTML = all.map(p => {
             const sel = AppState.selectedFlavors.some(f => f.id === p.id);
             return `<div class="flavor-card ${sel?'selected':''}" onclick="App.toggleFlavor(${p.id})">
                 <div class="flavor-check"><i class="fas fa-check"></i></div>
-                <div class="flavor-info"><div class="flavor-name">${p.name}</div><div class="flavor-desc">${p.description}</div></div>
-                <div class="flavor-price">${Utils.formatCurrency(p.prices[si])}</div>
+                <div class="flavor-info"><div class="flavor-name">${Utils.esc(p.nome)}</div><div class="flavor-desc">${Utils.esc(p.descricao || '')}</div></div>
+                <div class="flavor-price">${Utils.formatCurrency(Dados.precos(p)[si])}</div>
             </div>`;
         }).join('');
         const max = AppState.selectedSize.sabores;
@@ -308,7 +236,7 @@ const Render = {
         const c = document.getElementById('borda-options');
         c.innerHTML = BORDAS.map(b => `
             <div class="borda-option ${AppState.selectedBorda?.id===b.id?'selected':''}" onclick="App.selectBorda('${b.id}')">
-                <div class="borda-option-name">${b.nome}</div>
+                <div class="borda-option-name">${Utils.esc(b.nome)}</div>
                 <div class="borda-option-price">${b.preco > 0 ? '+ '+Utils.formatCurrency(b.preco) : 'Incluso'}</div>
             </div>`).join('');
     },
@@ -345,7 +273,7 @@ const Render = {
         }
         c.innerHTML = AppState.cart.map((item, i) => `
             <div class="cart-item">
-                <div class="cart-item-info"><div class="cart-item-name">${item.name}</div><div class="cart-item-detail">${item.details}</div></div>
+                <div class="cart-item-info"><div class="cart-item-name">${Utils.esc(item.name)}</div><div class="cart-item-detail">${Utils.esc(item.details)}</div></div>
                 <div class="cart-item-right"><div class="cart-item-price">${Utils.formatCurrency(item.price)}</div>
                 <button class="cart-remove" onclick="App.removeFromCart(${i})"><i class="fas fa-trash-alt"></i> Remover</button></div>
             </div>`).join('');
@@ -371,9 +299,16 @@ const Render = {
 
 // ── APP ──
 const App = {
-    init() {
-        Render.updateStatus();
-        Render.renderMenu();
+    async init() {
+        try {
+            await Dados.carregar();
+            Render.updateStatus();
+            Render.renderLoja();
+            Render.renderMenu();
+        } catch (erro) {
+            console.error(erro);
+            Render.renderErroDeCarga();
+        }
         this.setupEvents();
         Animations.init();
     },
@@ -448,12 +383,9 @@ const App = {
         document.getElementById('search-results').classList.remove('hidden');
         const grid = document.getElementById('search-results-grid');
         const noRes = document.getElementById('no-results');
-        const allPizzas = [...PIZZAS_SALGADAS, ...PIZZAS_DOCES];
-        const allDrinks = [...BEBIDAS, ...SUCOS, ...CERVEJAS];
-        const matchedPizzas = allPizzas.filter(p => p.name.toLowerCase().includes(q));
-        const matchedDrinks = allDrinks.filter(d => d.name.toLowerCase().includes(q));
-        let html = matchedPizzas.map(p => Render.pizzaCard(p)).join('');
-        html += matchedDrinks.map(d => Render.drinkCard(d, d.category || 'bebida')).join('');
+        const html = (MENU ? MENU.categorias : []).map(c =>
+            Dados.visiveis(c).filter(i => i.nome.toLowerCase().includes(q)).map(i => Render.card(i, c)).join('')
+        ).join('');
         if (html) { grid.innerHTML = html; noRes.classList.add('hidden'); }
         else { grid.innerHTML = ''; noRes.classList.remove('hidden'); }
     },
@@ -497,15 +429,16 @@ const App = {
     },
 
     // ─ Pizza Modal ─
-    openPizzaModal(id, type) {
-        const list = type === 'doce' ? PIZZAS_DOCES : PIZZAS_SALGADAS;
-        AppState.currentPizza = list.find(p => p.id === id);
+    openPizzaModal(id) {
+        const { item, categoria } = INDICE.get(id);
+        AppState.currentPizza = item;
+        AppState.currentCategoria = categoria;
         AppState.currentStep = 1;
         AppState.selectedSize = null;
         AppState.selectedFlavors = [];
         AppState.selectedMassa = 'tradicional';
         AppState.selectedBorda = BORDAS[0];
-        document.getElementById('modal-title').textContent = AppState.currentPizza.name;
+        document.getElementById('modal-title').textContent = AppState.currentPizza.nome;
         document.getElementById('prev-step').classList.add('hidden');
         document.getElementById('next-step').innerHTML = 'Próximo <i class="fas fa-arrow-right"></i>';
         Render.renderSizes();
@@ -523,8 +456,7 @@ const App = {
     },
 
     toggleFlavor(id) {
-        const list = AppState.currentPizza.id >= 100 ? PIZZAS_DOCES.filter(p => Array.isArray(p.prices)) : PIZZAS_SALGADAS;
-        const pizza = list.find(p => p.id === id);
+        const pizza = INDICE.get(id).item;
         const max = AppState.selectedSize.sabores;
         const idx = AppState.selectedFlavors.findIndex(f => f.id === id);
         if (idx >= 0) { AppState.selectedFlavors.splice(idx, 1); }
@@ -580,13 +512,13 @@ const App = {
     calcPizzaPrice() {
         if (!AppState.selectedSize || !AppState.selectedFlavors.length) return 0;
         const si = AppState.selectedSize.index;
-        const maxPrice = Math.max(...AppState.selectedFlavors.map(f => f.prices[si]));
+        const maxPrice = Math.max(...AppState.selectedFlavors.map(f => Dados.precos(f)[si]));
         const bordaPrice = AppState.selectedBorda ? AppState.selectedBorda.preco : 0;
         return maxPrice + bordaPrice;
     },
 
     addPizzaToCart() {
-        const flavors = AppState.selectedFlavors.map(f => f.name).join(' / ');
+        const flavors = AppState.selectedFlavors.map(f => f.nome).join(' / ');
         const size = AppState.selectedSize.nome;
         const massa = AppState.selectedMassa;
         const borda = AppState.selectedBorda?.nome || 'Sem Borda';
@@ -603,64 +535,46 @@ const App = {
         Utils.showToast('Pizza adicionada ao pedido!');
     },
 
-    openDessertModal(id) {
-        const dessert = PIZZAS_DOCES.find(p => p.id === id);
-        AppState.currentDrink = dessert;
+    // ─ Product Modal (preço único) ─
+    openProductModal(id) {
+        const { item, categoria } = INDICE.get(id);
+        const icone = Dados.icone(categoria);
+        AppState.currentDrink = item;
         AppState.drinkQty = 1;
-        AppState.selectedDessertOption = dessert.options?.[0] || null;
-        const ph = CONFIG.placeholders.pizzaDoce;
-        document.getElementById('drink-modal-title').textContent = 'Adicionar Sobremesa';
-        document.getElementById('drink-modal-image').src = dessert.image || ph;
-        document.getElementById('drink-modal-name').textContent = dessert.name;
-        document.getElementById('drink-modal-price').textContent = Utils.formatCurrency(dessert.price);
+        AppState.selectedDessertOption = item.opcoes?.[0] || null;
+        document.getElementById('drink-modal-title').textContent = icone.titulo;
+        document.getElementById('drink-modal-image').src = item.imagem || CONFIG.placeholders[icone.placeholder];
+        document.getElementById('drink-modal-name').textContent = item.nome;
+        document.getElementById('drink-modal-price').textContent = Utils.formatCurrency(item.preco);
         document.getElementById('drink-qty').textContent = '1';
-        this.renderDessertOptions(dessert);
+        this.renderDessertOptions(item);
         this.openModal('drink');
     },
 
-    renderDessertOptions(dessert) {
+    renderDessertOptions(item) {
         const wrap = document.getElementById('dessert-options-wrap');
         const list = document.getElementById('dessert-options');
-        if (!dessert.options?.length) {
+        if (!item.opcoes?.length) {
             wrap.classList.add('hidden');
             list.innerHTML = '';
             return;
         }
         wrap.classList.remove('hidden');
-        list.innerHTML = dessert.options.map(option => `
-            <button class="dessert-option ${AppState.selectedDessertOption === option ? 'selected' : ''}" onclick="App.selectDessertOption('${option}')">
-                ${option}
+        list.innerHTML = item.opcoes.map((opcao, i) => `
+            <button class="dessert-option ${AppState.selectedDessertOption === opcao ? 'selected' : ''}" onclick="App.selectDessertOption(${i})">
+                ${Utils.esc(opcao)}
             </button>
         `).join('');
     },
 
-    selectDessertOption(option) {
-        AppState.selectedDessertOption = option;
+    selectDessertOption(i) {
+        AppState.selectedDessertOption = AppState.currentDrink.opcoes[i];
         this.renderDessertOptions(AppState.currentDrink);
-    },
-
-    // ─ Drink Modal ─
-    openDrinkModal(id, type) {
-        const lists = { bebida: BEBIDAS, suco: SUCOS, cerveja: CERVEJAS };
-        const list = lists[type] || BEBIDAS;
-        AppState.currentDrink = list.find(d => d.id === id);
-        AppState.drinkQty = 1;
-        AppState.selectedDessertOption = null;
-        const d = AppState.currentDrink;
-        const ph = CONFIG.placeholders[type] || CONFIG.placeholders.bebida;
-        document.getElementById('drink-modal-title').textContent = 'Adicionar Bebida';
-        document.getElementById('drink-modal-image').src = d.image || ph;
-        document.getElementById('drink-modal-name').textContent = d.name;
-        document.getElementById('drink-modal-price').textContent = Utils.formatCurrency(d.price);
-        document.getElementById('drink-qty').textContent = '1';
-        document.getElementById('dessert-options-wrap').classList.add('hidden');
-        document.getElementById('dessert-options').innerHTML = '';
-        this.openModal('drink');
     },
 
     addDrinkToCart() {
         const d = AppState.currentDrink;
-        const isDessert = Array.isArray(d.options);
+        const isDessert = Array.isArray(d.opcoes);
         if (isDessert && !AppState.selectedDessertOption) {
             Utils.showToast('Selecione o sabor');
             return;
@@ -668,15 +582,15 @@ const App = {
         for (let i = 0; i < AppState.drinkQty; i++) {
             AppState.cart.push({
                 id: Utils.generateId(),
-                name: isDessert ? `${d.name} - ${AppState.selectedDessertOption}` : d.name,
+                name: isDessert ? `${d.nome} - ${AppState.selectedDessertOption}` : d.nome,
                 details: isDessert ? `Sabor: ${AppState.selectedDessertOption} | Qtd: 1` : 'Qtd: 1',
-                price: d.price,
+                price: d.preco,
                 type: isDessert ? 'sobremesa' : 'bebida'
             });
         }
         this.closeModal('drink');
         Render.updateCartBadge();
-        Utils.showToast(`${d.name} adicionado!`);
+        Utils.showToast(`${d.nome} adicionado!`);
     },
 
     // ─ Cart ─
@@ -738,7 +652,7 @@ const App = {
         msg += `*Aguarde um atendente confirmar o seu pedido e informar o valor da taxa de entrega.*\n`;
         msg += `Obrigado por escolher a Pizzaria Hit!\n`;
 
-        const url = `https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(msg)}`;
+        const url = `https://wa.me/${MENU.loja.whatsapp}?text=${encodeURIComponent(msg)}`;
         window.open(url, '_blank');
         if (typeof fbq !== 'undefined') fbq('track', 'Purchase', { value: total, currency: 'BRL' });
     }

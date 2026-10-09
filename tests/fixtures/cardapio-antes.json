@@ -1,0 +1,1127 @@
+{
+  "CONFIG": {
+    "whatsapp": "5565981572829",
+    "endereco": "R. Mal. Floriano Peixoto, 982, Duque de Caxias, Cuiabá - MT",
+    "horarioAbertura": 18,
+    "horarioFechamento": 23,
+    "diaSemanaFechado": 1
+  },
+  "TAMANHOS": [
+    {
+      "id": "broto",
+      "nome": "Broto",
+      "fatias": 2,
+      "sabores": 1,
+      "index": 0
+    },
+    {
+      "id": "pequena",
+      "nome": "Pequena",
+      "fatias": 4,
+      "sabores": 2,
+      "index": 1
+    },
+    {
+      "id": "media",
+      "nome": "Média",
+      "fatias": 6,
+      "sabores": 2,
+      "index": 2
+    },
+    {
+      "id": "grande",
+      "nome": "Grande",
+      "fatias": 8,
+      "sabores": 3,
+      "index": 3
+    }
+  ],
+  "BORDAS": [
+    {
+      "id": "sem-borda",
+      "nome": "Sem Borda",
+      "preco": 0
+    },
+    {
+      "id": "cream-cheese",
+      "nome": "Cream Cheese",
+      "preco": 19
+    },
+    {
+      "id": "catupiry",
+      "nome": "Catupiry",
+      "preco": 19
+    },
+    {
+      "id": "cheddar",
+      "nome": "Cheddar",
+      "preco": 19
+    },
+    {
+      "id": "chocolate",
+      "nome": "Chocolate",
+      "preco": 19
+    },
+    {
+      "id": "goiabada",
+      "nome": "Goiabada",
+      "preco": 19
+    },
+    {
+      "id": "doce-leite",
+      "nome": "Doce de Leite",
+      "preco": 19
+    }
+  ],
+  "PIZZAS_SALGADAS": [
+    {
+      "id": 1,
+      "name": "Mussarela",
+      "description": "Molho, mussarela, parmesão, azeitona e orégano",
+      "prices": [
+        58.9,
+        75.9,
+        93.9,
+        105.9
+      ],
+      "image": "media/flavors/ifood_ready/Mussarela.jpeg"
+    },
+    {
+      "id": 2,
+      "name": "Portuguesa",
+      "description": "Molho, mussarela, presunto, tomate, ovos, cebola, pimentão, azeitona e orégano",
+      "prices": [
+        58.9,
+        75.9,
+        93.9,
+        105.9
+      ],
+      "image": "media/flavors/ifood_ready/Portuguesaa.jpeg"
+    },
+    {
+      "id": 3,
+      "name": "Tradicional",
+      "description": "Molho, mussarela, presunto, azeitona e orégano",
+      "prices": [
+        58.9,
+        75.9,
+        93.9,
+        105.9
+      ],
+      "image": "media/flavors/ifood_ready/Tradicional.jpeg"
+    },
+    {
+      "id": 4,
+      "name": "Napolitana",
+      "description": "Molho, mussarela, parmesão, tomate, azeitona e orégano",
+      "prices": [
+        58.9,
+        75.9,
+        93.9,
+        105.9
+      ],
+      "image": "media/flavors/ifood_ready/Napolitana.jpeg"
+    },
+    {
+      "id": 5,
+      "name": "Calabresa",
+      "description": "Molho, mussarela, calabresa, cebola, azeitona e orégano",
+      "prices": [
+        58.9,
+        75.9,
+        93.9,
+        105.9
+      ],
+      "image": "media/flavors/ifood_ready/Calabresa.jpeg"
+    },
+    {
+      "id": 6,
+      "name": "Calabresa Especial",
+      "description": "Molho, mussarela, calabresa moída pré-assada, catupiry, uma pitadinha de pimenta calabresa, cebola, azeitona e orégano",
+      "prices": [
+        58.9,
+        75.9,
+        93.9,
+        105.9
+      ],
+      "image": "media/flavors/ifood_ready/Calabresa-especial.jpeg"
+    },
+    {
+      "id": 7,
+      "name": "Toscana",
+      "description": "Molho, calabresa moída, mussarela, catupiry, azeitona e orégano",
+      "prices": [
+        58.9,
+        75.9,
+        93.9,
+        105.9
+      ],
+      "image": "media/flavors/ifood_ready/Toscana.jpeg"
+    },
+    {
+      "id": 8,
+      "name": "Dom Camilo",
+      "description": "Molho, mussarela, presunto, calabresa, creme de leite, azeitona e orégano",
+      "prices": [
+        58.9,
+        75.9,
+        93.9,
+        105.9
+      ],
+      "image": "media/flavors/ifood_ready/Dom-Camilo.jpeg"
+    },
+    {
+      "id": 9,
+      "name": "Mexicana",
+      "description": "Molho, mussarela, calabresa moída, pimenta calabresa, azeitona e orégano",
+      "prices": [
+        58.9,
+        75.9,
+        93.9,
+        105.9
+      ],
+      "image": "media/flavors/ifood_ready/Mexicana.jpeg"
+    },
+    {
+      "id": 10,
+      "name": "Catupiry",
+      "description": "Molho, mussarela, catupiry, azeitona e orégano",
+      "prices": [
+        58.9,
+        75.9,
+        93.9,
+        105.9
+      ],
+      "image": "media/flavors/ifood_ready/Catupiry.jpeg"
+    },
+    {
+      "id": 11,
+      "name": "Frango com Catupiry",
+      "description": "Molho, mussarela, peito de frango, catupiry, azeitona e orégano",
+      "prices": [
+        58.9,
+        75.9,
+        93.9,
+        105.9
+      ],
+      "image": "media/flavors/ifood_ready/Frango-Catupiry.jpeg"
+    },
+    {
+      "id": 12,
+      "name": "Frango Especial",
+      "description": "Molho, mussarela, peito de frango, cebola, tomate seco, manjericão, azeitona e orégano",
+      "prices": [
+        64.9,
+        87.9,
+        102.9,
+        116.9
+      ],
+      "image": "media/flavors/ifood_ready/Frango-especial.jpeg"
+    },
+    {
+      "id": 13,
+      "name": "À Brasileira",
+      "description": "Molho, mussarela, peito de frango, milho verde, azeitona e orégano",
+      "prices": [
+        58.9,
+        75.9,
+        93.9,
+        105.9
+      ],
+      "image": "media/flavors/ifood_ready/A-Brasileira.jpeg"
+    },
+    {
+      "id": 14,
+      "name": "Atum",
+      "description": "Molho, mussarela, atum, tomate, cebola, azeitona e orégano",
+      "prices": [
+        58.9,
+        75.9,
+        93.9,
+        105.9
+      ],
+      "image": "media/flavors/ifood_ready/Atum.jpeg"
+    },
+    {
+      "id": 15,
+      "name": "Pizza Hit",
+      "description": "Molho, mussarela, catupiry, presunto, bacon, champignon, cebola, azeitona e orégano",
+      "prices": [
+        58.9,
+        75.9,
+        93.9,
+        105.9
+      ],
+      "image": "media/flavors/ifood_ready/hit.jpeg"
+    },
+    {
+      "id": 16,
+      "name": "Marguerita",
+      "description": "Molho, mussarela, manjericão fresco, tomate, parmesão, azeitona e orégano",
+      "prices": [
+        58.9,
+        75.9,
+        93.9,
+        105.9
+      ],
+      "image": "media/flavors/ifood_ready/Margherita.jpeg"
+    },
+    {
+      "id": 17,
+      "name": "Marguerita Especial",
+      "description": "Molho, mussarela, manjericão fresco, tomate, alho gratinado, tomate seco, parmesão, azeitona e orégano",
+      "prices": [
+        58.9,
+        75.9,
+        93.9,
+        105.9
+      ],
+      "image": "media/flavors/ifood_ready/Margherita-especial.jpeg"
+    },
+    {
+      "id": 18,
+      "name": "Aliche",
+      "description": "Molho, mussarela, parmesão, aliche, azeitona e orégano",
+      "prices": [
+        59.9,
+        83.9,
+        102.9,
+        112.9
+      ],
+      "image": "media/flavors/ifood_ready/Aliche.jpeg"
+    },
+    {
+      "id": 19,
+      "name": "Bacon",
+      "description": "Molho, mussarela, bacon, ovos, azeitona e orégano",
+      "prices": [
+        58.9,
+        75.9,
+        93.9,
+        105.9
+      ],
+      "image": "media/flavors/ifood_ready/Bacon.jpeg"
+    },
+    {
+      "id": 20,
+      "name": "Alho e Óleo",
+      "description": "Molho, mussarela, parmesão, alho gratinado no azeite, azeitona e orégano",
+      "prices": [
+        58.9,
+        75.9,
+        93.9,
+        105.9
+      ],
+      "image": "media/flavors/ifood_ready/Alho-e-Oleo.jpeg"
+    },
+    {
+      "id": 21,
+      "name": "Lombo ao Creme",
+      "description": "Molho, mussarela, lombinho canadense, requeijão cremoso, tomate, azeitona e orégano",
+      "prices": [
+        58.9,
+        75.9,
+        93.9,
+        105.9
+      ],
+      "image": "media/flavors/ifood_ready/Lombo-ao-Creme.jpeg"
+    },
+    {
+      "id": 22,
+      "name": "Genovesa",
+      "description": "Molho, mussarela, presunto, creme de leite, azeitona e orégano",
+      "prices": [
+        58.9,
+        75.9,
+        93.9,
+        105.9
+      ],
+      "image": "media/flavors/ifood_ready/Genovesa.jpeg"
+    },
+    {
+      "id": 23,
+      "name": "Palmito",
+      "description": "Molho, mussarela, palmito, tomate, azeitona e orégano",
+      "prices": [
+        58.9,
+        75.9,
+        93.9,
+        105.9
+      ],
+      "image": "media/flavors/ifood_ready/Palmito.jpeg"
+    },
+    {
+      "id": 24,
+      "name": "Quatro Queijos",
+      "description": "Molho, mussarela, catupiry, gorgonzola, provolone, parmesão, azeitona e orégano",
+      "prices": [
+        58.9,
+        75.9,
+        93.9,
+        105.9
+      ],
+      "image": "media/flavors/ifood_ready/Quatro-Queijos.jpeg"
+    },
+    {
+      "id": 25,
+      "name": "Super Hit",
+      "description": "Molho, mussarela, catupiry, presunto, calabresa, bacon, champignon, requeijão, cebola, azeitona e orégano",
+      "prices": [
+        64.9,
+        87.9,
+        102.9,
+        116.9
+      ],
+      "image": "media/flavors/ifood_ready/Super-hit.jpeg"
+    },
+    {
+      "id": 26,
+      "name": "Caprese",
+      "description": "Molho, mussarela, tomate, manjericão, mussarela de búfala, pasta de azeitona preta, azeitona e orégano",
+      "prices": [
+        59.9,
+        83.9,
+        102.9,
+        112.9
+      ],
+      "image": "media/flavors/ifood_ready/caprese.jpeg"
+    },
+    {
+      "id": 27,
+      "name": "Pizza do Chef",
+      "description": "Molho, mussarela, ricota, tomate cereja, manjericão, azeitona e orégano",
+      "prices": [
+        59.9,
+        83.9,
+        102.9,
+        112.9
+      ],
+      "image": "media/flavors/ifood_ready/Pizza-do-chef.jpeg"
+    },
+    {
+      "id": 28,
+      "name": "Dom Valério",
+      "description": "Molho, mussarela, palmito, catupiry, bacon, azeitona e orégano",
+      "prices": [
+        59.9,
+        83.9,
+        102.9,
+        112.9
+      ],
+      "image": "media/flavors/ifood_ready/Dom-Valerio.jpeg"
+    },
+    {
+      "id": 29,
+      "name": "Moda Arací",
+      "description": "Molho, mussarela, ricota, provolone, presunto, ovos, bacon e orégano",
+      "prices": [
+        58.9,
+        75.9,
+        93.9,
+        105.9
+      ],
+      "image": "media/flavors/ifood_ready/moda-araci.jpeg"
+    },
+    {
+      "id": 30,
+      "name": "Vegetariana",
+      "description": "Molho, mussarela, champignon, tomate, cebola, pimentão verde, azeitona e orégano",
+      "prices": [
+        59.9,
+        83.9,
+        102.9,
+        112.9
+      ],
+      "image": "media/flavors/ifood_ready/Vegetariana.jpeg"
+    },
+    {
+      "id": 31,
+      "name": "Escarola",
+      "description": "Molho, mussarela, escarola, catupiry, bacon, azeitona e orégano",
+      "prices": [
+        58.9,
+        75.9,
+        93.9,
+        105.9
+      ],
+      "image": "media/flavors/ifood_ready/Escarola.jpeg"
+    },
+    {
+      "id": 32,
+      "name": "Brócolis",
+      "description": "Molho, mussarela, brócolis, bacon, alho gratinado, catupiry, azeitona e orégano",
+      "prices": [
+        58.9,
+        75.9,
+        93.9,
+        105.9
+      ],
+      "image": "media/flavors/ifood_ready/Brocolis.jpeg"
+    },
+    {
+      "id": 33,
+      "name": "Brócolis com Berinjela",
+      "description": "Molho, mussarela, brócolis, berinjela em pasta, azeitona e orégano",
+      "prices": [
+        55.9,
+        81.9,
+        90.9,
+        105.9
+      ],
+      "image": "media/flavors/ifood_ready/brocolis-berinjela.jpeg"
+    },
+    {
+      "id": 34,
+      "name": "Berinjela",
+      "description": "Molho, mussarela, berinjela em pasta, tomate seco, cebola, azeitona e orégano",
+      "prices": [
+        59.9,
+        83.9,
+        102.9,
+        112.9
+      ],
+      "image": "media/flavors/ifood_ready/Berinjela.jpeg"
+    },
+    {
+      "id": 35,
+      "name": "Rúcula",
+      "description": "Molho, mussarela, rúcula, tomate seco, mussarela de búfala, azeitona e orégano",
+      "prices": [
+        59.9,
+        83.9,
+        102.9,
+        112.9
+      ],
+      "image": "media/flavors/ifood_ready/Rucula.jpeg"
+    },
+    {
+      "id": 36,
+      "name": "Milho",
+      "description": "Molho, mussarela, milho, azeitona e orégano",
+      "prices": [
+        58.9,
+        75.9,
+        93.9,
+        105.9
+      ],
+      "image": "media/flavors/ifood_ready/milho.jpeg"
+    },
+    {
+      "id": 37,
+      "name": "Milho com Catupiry",
+      "description": "Molho, mussarela, catupiry, milho, azeitona e orégano",
+      "prices": [
+        58.9,
+        75.9,
+        93.9,
+        105.9
+      ],
+      "image": "media/flavors/ifood_ready/Milho-com-catupiry.jpeg"
+    },
+    {
+      "id": 38,
+      "name": "Super Portuguesa",
+      "description": "Molho, mussarela, presunto, calabresa, tomate, ovos, cebola, azeitona, pimentão e orégano",
+      "prices": [
+        64.9,
+        87.9,
+        102.9,
+        116.9
+      ],
+      "image": "media/flavors/ifood_ready/Super-Portuguesa.jpeg"
+    },
+    {
+      "id": 39,
+      "name": "Super Quatro Queijos",
+      "description": "Molho, mussarela, catupiry, gorgonzola, provolone, tomate seco, azeitona, parmesão e orégano",
+      "prices": [
+        64.9,
+        87.9,
+        102.9,
+        116.9
+      ],
+      "image": "media/flavors/ifood_ready/Super-quatro-queijos.jpeg"
+    },
+    {
+      "id": 40,
+      "name": "Strogonoff de Frango",
+      "description": "Molho, mussarela, peito de frango, creme de leite, palmito, azeitona, orégano e batata palha",
+      "prices": [
+        64.9,
+        87.9,
+        102.9,
+        116.9
+      ],
+      "image": "media/flavors/ifood_ready/strogonoff-frango.jpeg"
+    },
+    {
+      "id": 41,
+      "name": "Strogonoff de Filé",
+      "description": "Molho, mussarela, filé, creme de leite, champignon, batata palha, azeitona e orégano",
+      "prices": [
+        64.9,
+        87.9,
+        102.9,
+        116.9
+      ],
+      "image": "media/flavors/ifood_ready/Strogonoff-file.jpeg"
+    },
+    {
+      "id": 42,
+      "name": "Filé Especial",
+      "description": "Molho, mussarela, filé, tomate cereja, azeitona e orégano",
+      "prices": [
+        64.9,
+        87.9,
+        102.9,
+        116.9
+      ],
+      "image": "media/flavors/ifood_ready/File-Especial.jpeg"
+    },
+    {
+      "id": 43,
+      "name": "Pantaneira",
+      "description": "Molho, mussarela, carne seca, catupiry, creme de leite, banana da terra frita, azeitona e orégano",
+      "prices": [
+        64.9,
+        87.9,
+        102.9,
+        116.9
+      ],
+      "image": "media/flavors/ifood_ready/Pantanera.jpeg"
+    },
+    {
+      "id": 44,
+      "name": "Suíça",
+      "description": "Molho, mussarela, lombo canadense, catupiry, azeitona e orégano",
+      "prices": [
+        55.9,
+        81.9,
+        90.9,
+        105.9
+      ],
+      "image": "media/flavors/ifood_ready/Suica.jpeg"
+    },
+    {
+      "id": 45,
+      "name": "Camarão",
+      "description": "Molho, mussarela, camarão, creme de leite, parmesão, batata palha, azeitona e orégano",
+      "prices": [
+        65.9,
+        89.9,
+        104.9,
+        119.2
+      ],
+      "image": "media/flavors/ifood_ready/Camarao.jpeg"
+    },
+    {
+      "id": 46,
+      "name": "Bacalhau",
+      "description": "Molho, mussarela, bacalhau refogado no azeite, tomate, pimentão, cebola, ovos, azeitona e orégano",
+      "prices": [
+        65.9,
+        89.9,
+        104.9,
+        119.2
+      ],
+      "image": "media/flavors/ifood_ready/Bacalhau.jpeg"
+    },
+    {
+      "id": 47,
+      "name": "Mussarela de Búfala",
+      "description": "Molho, mussarela de búfala, rodelas de tomate, presunto, azeitona e orégano",
+      "prices": [
+        59.9,
+        83.9,
+        102.9,
+        112.9
+      ],
+      "image": "media/flavors/ifood_ready/Mussarela-bufala.jpeg"
+    },
+    {
+      "id": 48,
+      "name": "Abobrinha",
+      "description": "Molho, abobrinha refogada, mussarela de búfala, parmesão, azeitona e orégano",
+      "prices": [
+        59.9,
+        83.9,
+        102.9,
+        112.9
+      ],
+      "image": "media/flavors/ifood_ready/Abobrinha.jpeg"
+    },
+    {
+      "id": 49,
+      "name": "Light",
+      "description": "Molho, mussarela, ricota, tomate seco, manjericão, azeitona e orégano",
+      "prices": [
+        59.9,
+        83.9,
+        102.9,
+        112.9
+      ],
+      "image": "media/flavors/ifood_ready/Light.jpeg"
+    },
+    {
+      "id": 50,
+      "name": "Pepperone",
+      "description": "Molho, mussarela, pepperone, azeitona e orégano",
+      "prices": [
+        59.9,
+        83.9,
+        102.9,
+        112.9
+      ],
+      "image": "media/flavors/ifood_ready/Peperone.jpeg"
+    },
+    {
+      "id": 51,
+      "name": "Peito de Peru",
+      "description": "Molho, mussarela, peito de peru, catupiry, azeitona e orégano",
+      "prices": [
+        55.9,
+        81.9,
+        90.9,
+        105.9
+      ],
+      "image": "media/flavors/ifood_ready/Peito-de-peru.jpeg"
+    },
+    {
+      "id": 52,
+      "name": "Basílica",
+      "description": "Molho, mussarela, tomate cereja, pesto de rúcula, azeitona e orégano",
+      "prices": [
+        59.9,
+        83.9,
+        102.9,
+        112.9
+      ],
+      "image": "media/flavors/ifood_ready/basilica.jpeg"
+    },
+    {
+      "id": 53,
+      "name": "Caprese com Pepperone",
+      "description": "Molho, mussarela, pepperone, tomate, mussarela de búfala, manjericão, pasta de azeitona preta e orégano",
+      "prices": [
+        59.9,
+        83.9,
+        102.9,
+        112.9
+      ],
+      "image": "media/flavors/ifood_ready/Caprese-com-peperone.jpeg"
+    },
+    {
+      "id": 54,
+      "name": "Presunto de Parma",
+      "description": "Molho de tomate, mussarela de Búfala, tomate cereja, presunto de Parma, azeitona preta e orégano",
+      "prices": [
+        64.9,
+        87.9,
+        102.9,
+        116.9
+      ],
+      "image": "media/flavors/ifood_ready/presunto-de-parma.jpeg"
+    },
+    {
+      "id": 55,
+      "name": "Vegetariana Hit",
+      "description": "Molho de tomate, mussarela de Búfala, tomate cereja, palmito, brócolis, abobrinha, azeitona e orégano",
+      "prices": [
+        65.9,
+        89.9,
+        104.9,
+        119.2
+      ],
+      "image": "media/flavors/ifood_ready/Vegetariana-Hit.jpeg"
+    }
+  ],
+  "PIZZAS_DOCES": [
+    {
+      "id": 110,
+      "name": "Brownie",
+      "description": "Brownie da Brown's - escolha Ninho ou Chocolate",
+      "price": 18,
+      "image": "media/flavors/sweet_flavors/ifood_ready/brownie-hit-black.png",
+      "options": [
+        "Ninho",
+        "Chocolate"
+      ]
+    },
+    {
+      "id": 101,
+      "name": "California",
+      "description": "Creme de leite, mussarela, lombo, figo, pêssego, ameixa e orégano",
+      "prices": [
+        55.9,
+        81.9,
+        90.9,
+        105.9
+      ],
+      "image": null
+    },
+    {
+      "id": 102,
+      "name": "Salada de Fruta",
+      "description": "Creme de leite, mussarela, pêssego, figo, ameixa, cereja e orégano",
+      "prices": [
+        55.9,
+        81.9,
+        90.9,
+        105.9
+      ],
+      "image": null
+    },
+    {
+      "id": 103,
+      "name": "Romeu e Julieta",
+      "description": "Creme de leite, mussarela, banana, doce de goiaba e canela",
+      "prices": [
+        55.9,
+        81.9,
+        90.9,
+        105.9
+      ],
+      "image": null
+    },
+    {
+      "id": 104,
+      "name": "Banana",
+      "description": "Creme de leite, mussarela, banana, leite condensado e canela",
+      "prices": [
+        55.9,
+        81.9,
+        90.9,
+        105.9
+      ],
+      "image": "media/flavors/sweet_flavors/ifood_ready/banana.jpeg"
+    },
+    {
+      "id": 105,
+      "name": "Chocolate com Granulado",
+      "description": "Creme de leite, chocolate e granulado",
+      "prices": [
+        55.9,
+        81.9,
+        90.9,
+        105.9
+      ],
+      "image": "media/flavors/sweet_flavors/ifood_ready/Chocolate.jpeg"
+    },
+    {
+      "id": 106,
+      "name": "Chocolate com Cereja",
+      "description": "Creme de leite, chocolate e cereja",
+      "prices": [
+        55.9,
+        81.9,
+        90.9,
+        105.9
+      ],
+      "image": "media/flavors/sweet_flavors/ifood_ready/chocolate-cereja.jpeg"
+    },
+    {
+      "id": 107,
+      "name": "Chocolate com Côco",
+      "description": "Creme de leite, chocolate e coco",
+      "prices": [
+        55.9,
+        81.9,
+        90.9,
+        105.9
+      ],
+      "image": "media/flavors/sweet_flavors/ifood_ready/chocolate-coco.jpeg"
+    },
+    {
+      "id": 108,
+      "name": "Chocolate com Castanha de Caju",
+      "description": "Creme de leite, chocolate e castanha de caju",
+      "prices": [
+        55.9,
+        81.9,
+        90.9,
+        105.9
+      ],
+      "image": null
+    },
+    {
+      "id": 109,
+      "name": "Chocolate com Banana",
+      "description": "Creme de leite, mussarela, banana e chocolate",
+      "prices": [
+        55.9,
+        81.9,
+        90.9,
+        105.9
+      ],
+      "image": null
+    }
+  ],
+  "BEBIDAS": [
+    {
+      "id": 201,
+      "name": "Coca-Cola 1,5L",
+      "price": 16,
+      "image": "media/drinks_nobg/Coca-cola.png",
+      "category": "refrigerante"
+    },
+    {
+      "id": 202,
+      "name": "Coca-Cola Zero 1,5L",
+      "price": 16,
+      "image": "media/drinks_nobg/Coca-zero.png",
+      "category": "refrigerante"
+    },
+    {
+      "id": 203,
+      "name": "Guaraná Antarctica 1,5L",
+      "price": 15,
+      "image": "media/drinks_nobg/guarana-litro-removebg-preview.png",
+      "category": "refrigerante"
+    },
+    {
+      "id": 204,
+      "name": "Guaraná Zero 1,5L",
+      "price": 15,
+      "image": "media/drinks_nobg/guarana-zero-litro-removebg-preview.png",
+      "category": "refrigerante"
+    },
+    {
+      "id": 205,
+      "name": "Sprite 1,5L",
+      "price": 15,
+      "image": "media/drinks_nobg/Sprite.png",
+      "category": "refrigerante"
+    },
+    {
+      "id": 206,
+      "name": "Fanta 1,5L",
+      "price": 15,
+      "image": "media/drinks_nobg/Fanta.png",
+      "category": "refrigerante"
+    },
+    {
+      "id": 207,
+      "name": "Água Mineral Puríssima 1,5L",
+      "price": 12,
+      "image": "media/drinks_nobg/purissima-1.5l-removebg-preview.png",
+      "category": "agua"
+    },
+    {
+      "id": 208,
+      "name": "Coca-Cola Lata 310ml",
+      "price": 8.9,
+      "image": "media/drinks_nobg/coca-cola-310ml-1-removebg-preview.png",
+      "category": "refrigerante"
+    },
+    {
+      "id": 209,
+      "name": "Coca Zero Lata 310ml",
+      "price": 8.9,
+      "image": "media/drinks_nobg/coca-zero-310ml.png",
+      "category": "refrigerante"
+    },
+    {
+      "id": 210,
+      "name": "Guaraná Lata 350ml",
+      "price": 8.9,
+      "image": "media/drinks_nobg/Guarana-lata.png",
+      "category": "refrigerante"
+    },
+    {
+      "id": 211,
+      "name": "Guaraná Zero Lata 350ml",
+      "price": 8.9,
+      "image": "media/drinks_nobg/guarana-lata-zero.png",
+      "category": "refrigerante"
+    },
+    {
+      "id": 212,
+      "name": "Schweppes Citrus 310ml",
+      "price": 8.9,
+      "image": "media/drinks_nobg/schweppes-310ml-removebg-preview.png",
+      "category": "refrigerante"
+    },
+    {
+      "id": 213,
+      "name": "Schweppes Tônica 310ml",
+      "price": 8.9,
+      "image": "media/drinks_nobg/schweppes-tonica-310ml-removebg-preview.png",
+      "category": "refrigerante"
+    },
+    {
+      "id": 214,
+      "name": "Sprite Lata 350ml",
+      "price": 8.9,
+      "image": "media/drinks_nobg/sprite-lata.png",
+      "category": "refrigerante"
+    },
+    {
+      "id": 215,
+      "name": "Fanta Lata 350ml",
+      "price": 8.9,
+      "image": "media/drinks_nobg/Fanta-lata.png",
+      "category": "refrigerante"
+    },
+    {
+      "id": 216,
+      "name": "Água Mineral Puríssima 497ml",
+      "price": 6,
+      "image": "media/drinks_nobg/purissima-497ml-removebg-preview.png",
+      "category": "agua"
+    },
+    {
+      "id": 217,
+      "name": "Água com Gás Puríssima 497ml",
+      "price": 7.9,
+      "image": "media/drinks_nobg/purissima-497ml-comgas-removebg-preview.png",
+      "category": "agua"
+    },
+    {
+      "id": 218,
+      "name": "Aquárius Lemon 510ml",
+      "price": 8,
+      "image": "media/drinks_nobg/Aquarius-lemon.png",
+      "category": "agua"
+    }
+  ],
+  "CERVEJAS": [
+    {
+      "id": 301,
+      "name": "Budweiser Long Neck",
+      "price": 13.9,
+      "image": "media/drinks_nobg/budweiser.png"
+    },
+    {
+      "id": 302,
+      "name": "Stella Artois Long Neck",
+      "price": 13.9,
+      "image": "media/drinks_nobg/Stella.png"
+    },
+    {
+      "id": 303,
+      "name": "Malzbier Long Neck",
+      "price": 13.9,
+      "image": "media/drinks_nobg/malzbier.png"
+    },
+    {
+      "id": 304,
+      "name": "Bohemia Long Neck",
+      "price": 13.9,
+      "image": "media/drinks_nobg/bohemia.png"
+    },
+    {
+      "id": 305,
+      "name": "Heineken Long Neck",
+      "price": 15.9,
+      "image": "media/drinks_nobg/heineken.png"
+    },
+    {
+      "id": 306,
+      "name": "Eisenbahn Long Neck",
+      "price": 13.9,
+      "image": "media/drinks_nobg/Eisenbahn.png"
+    },
+    {
+      "id": 307,
+      "name": "Heineken Zero Long Neck",
+      "price": 15.9,
+      "image": "media/drinks_nobg/heineken-zero.png"
+    },
+    {
+      "id": 308,
+      "name": "Corona Long Neck",
+      "price": 15.9,
+      "image": "media/drinks_nobg/corona.png"
+    }
+  ],
+  "SUCOS": [
+    {
+      "id": 401,
+      "name": "Suco de Laranja 1L",
+      "description": "Suco natural de laranja",
+      "price": 29.9,
+      "image": null,
+      "category": "natural"
+    },
+    {
+      "id": 402,
+      "name": "Suco Laranja com Acerola 1L",
+      "description": "Suco natural de laranja com acerola",
+      "price": 35.9,
+      "image": null,
+      "category": "mista"
+    },
+    {
+      "id": 403,
+      "name": "Suco de Abacaxi 1L",
+      "description": "Suco natural de abacaxi",
+      "price": 29.9,
+      "image": null,
+      "category": "natural"
+    },
+    {
+      "id": 404,
+      "name": "Suco de Limão 1L",
+      "description": "Suco natural de limão",
+      "price": 29.9,
+      "image": null,
+      "category": "natural"
+    },
+    {
+      "id": 405,
+      "name": "Suco de Maracujá 1L",
+      "description": "Suco natural de maracujá",
+      "price": 29.9,
+      "image": null,
+      "category": "natural"
+    },
+    {
+      "id": 406,
+      "name": "Suco Verde 1L",
+      "description": "Laranja, couve, hortelã, manjericão e gengibre",
+      "price": 35.9,
+      "image": null,
+      "category": "natural"
+    },
+    {
+      "id": 408,
+      "name": "Suco Abacaxi com Hortelã 1L",
+      "description": "Suco natural de abacaxi com hortelã",
+      "price": 35.9,
+      "image": null,
+      "category": "mista"
+    },
+    {
+      "id": 409,
+      "name": "Suco de Acerola 1L",
+      "description": "Suco de polpa de acerola",
+      "price": 29.9,
+      "image": null,
+      "category": "polpa"
+    },
+    {
+      "id": 410,
+      "name": "Suco de Morango 1L",
+      "description": "Suco de polpa de morango",
+      "price": 29.9,
+      "image": null,
+      "category": "polpa"
+    },
+    {
+      "id": 411,
+      "name": "Suco de Uva 1L",
+      "description": "Suco de polpa de uva",
+      "price": 29.9,
+      "image": null,
+      "category": "polpa"
+    },
+    {
+      "id": 412,
+      "name": "Suco Laranja com Morango 1L",
+      "description": "Suco natural de laranja com morango",
+      "price": 35.9,
+      "image": null,
+      "category": "mista"
+    }
+  ]
+}

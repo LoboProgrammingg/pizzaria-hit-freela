@@ -540,6 +540,12 @@ body {
 .section-icon.bebidas { background: linear-gradient(135deg, #1565C0, #42A5F5); color: #fff; }
 .section-icon.sucos { background: linear-gradient(135deg, #2E7D32, #66BB6A); color: #fff; }
 .section-icon.cervejas { background: linear-gradient(135deg, #E65100, #FF9800); color: #fff; }
+.section-icon.outro { background: linear-gradient(135deg, #455A64, #78909C); color: #fff; }
+
+.menu-erro { text-align: center; padding: 48px 20px; color: var(--text-secondary); }
+.menu-erro i { font-size: 32px; color: var(--brand-gold); margin-bottom: 12px; }
+.menu-erro p { margin-bottom: 20px; }
+.menu-erro .btn-primary { width: auto; padding: 14px 24px; }
 
 .section-title {
     font-size: 18px;

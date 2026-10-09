@@ -26,7 +26,7 @@
     <!-- End Meta Pixel Code -->
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css?v=2">
 </head>
 <body>
 
@@ -68,21 +68,21 @@
             <div class="info-icon"><i class="fas fa-clock"></i></div>
             <div>
                 <div class="info-label">Horário de Funcionamento</div>
-                <div class="info-value">Terça a Domingo: 18h às 23h<br>Segunda-feira: Fechado</div>
+                <div class="info-value" id="info-horario">Terça a Domingo: 18h às 23h<br>Segunda-feira: Fechado</div>
             </div>
         </div>
         <div class="info-item">
             <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
             <div>
                 <div class="info-label">Endereço</div>
-                <div class="info-value">R. Mal. Floriano Peixoto, 982<br>Duque de Caxias, Cuiabá - MT</div>
+                <div class="info-value" id="info-endereco">R. Mal. Floriano Peixoto, 982<br>Duque de Caxias, Cuiabá - MT</div>
             </div>
         </div>
         <div class="info-item" style="border:none">
             <div class="info-icon"><i class="fas fa-phone"></i></div>
             <div>
                 <div class="info-label">WhatsApp</div>
-                <div class="info-value">(65) 98157-2829</div>
+                <div class="info-value" id="info-whatsapp">(65) 98157-2829</div>
             </div>
         </div>
     </div>
@@ -95,7 +95,7 @@
         <div class="hero-divider"></div>
         <div class="hero-hours">
             <i class="far fa-clock"></i>
-            <span>Terça a Domingo • 18h – 23h</span>
+            <span id="hero-hours-text">Terça a Domingo • 18h – 23h</span>
         </div>
     </section>
 
@@ -128,75 +128,8 @@
             </div>
         </section>
 
-        <!-- All Sections -->
-        <div id="all-sections">
-
-            <!-- PIZZAS SALGADAS -->
-            <section class="menu-section" id="sec-pizzas-salgadas">
-                <div class="section-header">
-                    <div class="section-icon pizzas"><i class="fas fa-pizza-slice"></i></div>
-                    <div>
-                        <div class="section-title">Pizzas Salgadas</div>
-                        <div class="section-subtitle">Escolha seu sabor favorito</div>
-                    </div>
-                    <span class="section-count" id="count-salgadas"></span>
-                </div>
-                <div id="pizzas-salgadas-grid" class="product-grid cols-3"></div>
-            </section>
-
-            <!-- PIZZAS DOCES -->
-            <section class="menu-section" id="sec-pizzas-doces">
-                <div class="section-header">
-                    <div class="section-icon doces"><i class="fas fa-cookie-bite"></i></div>
-                    <div>
-                        <div class="section-title">Pizzas Doces</div>
-                        <div class="section-subtitle">Sobremesas irresistíveis</div>
-                    </div>
-                    <span class="section-count" id="count-doces"></span>
-                </div>
-                <div id="pizzas-doces-grid" class="product-grid cols-3"></div>
-            </section>
-
-            <!-- BEBIDAS -->
-            <section class="menu-section" id="sec-bebidas">
-                <div class="section-header">
-                    <div class="section-icon bebidas"><i class="fas fa-glass-water"></i></div>
-                    <div>
-                        <div class="section-title">Bebidas</div>
-                        <div class="section-subtitle">Refrigerantes e águas</div>
-                    </div>
-                    <span class="section-count" id="count-bebidas"></span>
-                </div>
-                <div id="bebidas-grid" class="product-grid cols-2"></div>
-            </section>
-
-            <!-- SUCOS -->
-            <section class="menu-section" id="sec-sucos">
-                <div class="section-header">
-                    <div class="section-icon sucos"><i class="fas fa-blender"></i></div>
-                    <div>
-                        <div class="section-title">Sucos Naturais</div>
-                        <div class="section-subtitle">Frescos e saudáveis</div>
-                    </div>
-                    <span class="section-count" id="count-sucos"></span>
-                </div>
-                <div id="sucos-grid" class="product-grid cols-2"></div>
-            </section>
-
-            <!-- CERVEJAS -->
-            <section class="menu-section" id="sec-cervejas">
-                <div class="section-header">
-                    <div class="section-icon cervejas"><i class="fas fa-beer-mug-empty"></i></div>
-                    <div>
-                        <div class="section-title">Cervejas</div>
-                        <div class="section-subtitle">Long Necks geladas</div>
-                    </div>
-                    <span class="section-count" id="count-cervejas"></span>
-                </div>
-                <div id="cervejas-grid" class="product-grid cols-2"></div>
-            </section>
-
-        </div>
+        <!-- All Sections (geradas a partir de menu.json) -->
+        <div id="all-sections"></div>
     </main>
 
     <!-- Footer -->
@@ -370,8 +303,9 @@
     </div>
 
     <!-- GSAP -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="menu-core.js?v=1"></script>
+    <script src="script.js?v=2"></script>
 </body>
 </html>
